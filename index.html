@@ -17,10 +17,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LearnPythonForFree</title>
     <meta name="description" content="Welcome to LearnPythonForFree, where you learn python for free.">
-    <meta name="keywords" content="simple website, services, contact, about">
+    <meta name="keywords" content="python, learnpythonforfree, learnpython, free, for free">
     <!-- Include Tailwind CSS via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=DynaPuff:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- favicon -->
     
@@ -72,8 +71,9 @@
                 <a href="#tuples"      class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">Tuples</a>
                 <a href="#input"       class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">Input</a>
                 <a href="#operators"   class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">Operators</a>
-                <a href="#if-else"   class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">If-Else</a>
-                <a href="#loops"   class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">Loops</a>
+                <a href="#if-else"     class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">If-Else</a>
+                <a href="#loops"       class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">Loops</a>
+                <a href="#functions"   class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">Functions</a>
             </div>
         </nav>
     </header>
@@ -372,7 +372,7 @@
             <code>
                 <span class="text-blue-300">print</span>(<span class="text-green-400">10</span> > <span class="text-green-400">5</span> <span class="text-blue-600">and</span> <span class="text-green-400">8</span> > <span class="text-green-400">3</span>) <br> # True (both conditions are true) <br>
                 <span class="text-blue-300">print</span>(<span class="text-green-400">10</span> > <span class="text-green-400">5</span> <span class="text-blue-600">or</span> <span class="text-green-400">8</span> < <span class="text-green-400">3</span>) <br> # True (one conditions are true) <br>
-                <span class="text-blue-300">print</span>(<span class="text-blue-600">not</span>(<span class="text-green-400">10</span> > <span class="text-green-400">5</span>)) <br> <span class="text-xs"> # True (False not inverts the true condition) </span><br>
+                <span class="text-blue-300">print</span>(<span class="text-blue-600">not</span>(<span class="text-green-400">10</span> > <span class="text-green-400">5</span>)) <br> <span class="text-xs"> # False (not inverts the true condition) </span><br>
             </code>
         </pre>
 <!--------------------------------------------------------------------------------------------------------------------------------------------->
@@ -441,9 +441,30 @@
         </pre>
         <p class="mt-5 text-2xl ml-5 mr-5"><B> NOTE!</B> :- YOU MUST UPDATE VARIABLES CORRECTLY IF YOU DON'T IT WILL RUN <B> INFINITELY</B> AND NEVER STOPS LIKE I USED <B>COUNTER += 1</B> WHICH ALSO MEANS <BR> <B>COUNTER = COUNTER + 1</B> <BR> WHICH MEANS I AM INCRESING OR INCREMENTING THE VALUE OF COUNTER</p>
         
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <hr style="border: 1px solid #000000; width: 100%; margin: 40px auto;" id="functions">
+
+        <h1 class="text-5xl mt-8 ml-5 text-orange-600" id="input">
+           <B>FUNCTIONS</B> <span><a href="#top" class="text-2xl"> ⇧</a></span>
+        </h1>
+        <p class="mt-5 text-2xl ml-5 mr-5"> A <b>function</b> is a reusable block of code designed to perform a specific task. You can think of it as a "mini-program" within your main program. Functions allow you to break down complex code into smaller, manageable parts and make your code cleaner and easier to understand. It is like variables which you can use repeatedly unlike variable you can do anything like assign variables, if-else, loops, etc. <br> To define a function, we use the <b>def</b> keyword, followed by the function name, parentheses <b>()</b>, and a colon <b>:</b>. After that, the indented lines contain the function's code. </p> 
+        <h2 class="text-4xl ml-5 mt-4 ">For Example</h2> 
+        <br>
+        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg  ml-5 mr-5 m-2">
+            <code>
+                <span class="text-blue-400">def</span> <span class="text-red-600"> greet</span> 
+                (): <br>
+                <span class="text-blue-300">&nbsp;&nbsp;&nbsp;&nbsp;print</span>(<span class="text-green-400">"Hello, World!"</span>) <br> <span class="text-green-500">greet()</span> <br> #result -> Hello, World!
+            </code>
+        </pre>
+        <p class="mt-5 text-2xl ml-5 mr-5"> <B> NOTE!</B>  :- YOU MUST CALL THE FUNCTION OUTSIDE THE FUNCTION OR IT WILL NOT EXECUTE</p>
+
 
     </main>
-
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------->
 
     <footer class="bg-gray-800 text-white flex mt-20 justify-center">
         <a href="https://www.instagram.com/learnpythonforfree/"><img src="Images/insta.png" alt="" width="50px" class="px-1 m-3 mr-2"></a>
