@@ -1,73 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KR1SYPGYY1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KR1SYPGYY1');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <meta name="description" content="Welcome to My Simple Website, where we provide a range of services to meet your needs.">
-    <meta name="keywords" content="simple website, services, contact, about">
-    <!-- Include Tailwind CSS via CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- favicon -->
+    <title>Contact | LearnPythonForFree</title>
+    <meta name="description" content="Learn more about the creator of LearnPythonForFree and their mission to teach Python for free.">
+    <meta name="keywords" content="python, learn python for free, about">
     
+    <!-- Custom CSS for Dark Theme -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- favicon -->
     <link rel="icon" type="image/png" href="Images/favicon-48x48.png" sizes="48x48" />
     <link rel="icon" type="image/svg+xml" href="Images/favicon.svg" />
     <link rel="shortcut icon" href="Images/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="LearnPython" />
     <link rel="manifest" href="site.webmanifest" />
-    <style>
-        .font-dynapuff {
-            font-family: 'DynaPuff', cursive;
-        }
-        /* Additional style to ensure single-line display */
-        pre {
-            white-space: nowrap; /* Prevent line breaks */
-        }
-        h1, h2, h3, h4, h5, h6, p {
-            font-family: 'Roboto', sans-serif; /* Replace 'Roboto' with your chosen font */
-            line-height: 1.5; /* Optional: improves readability */
-            margin: 0; /* Optional: resets margin for consistent spacing */}
-    </style>
 </head>
-<body class="bg-gray-100 flex flex-col min-h-screen">
-    <header class="bg-gray-800 text-white p-5 text-center">
-        <h1 class="text-3xl font-semibold">Welcome to</h1>
-        
-        <h2 class="font-light font-dynapuff text-yellow-200 mt-3 text-4xl">
-            Learn Python For Free
-        </h2>
-        <nav class="mt-4">
-            <a href="index.html" class="mx-3 hover:text-gray-300">Home</a>
-            <a href="about.html" class="mx-3 hover:text-gray-300">About Me</a>
+
+<body>
+    <header class="header">
+        <h2 class="subtitle">Learn Python For Free</h2>
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
         </nav>
     </header>
-    
-    <main class="container mx-auto mt-5 flex-grow">
-        
-        <section id="about" class="bg-white p-6 rounded-lg shadow-md mb-5">
-            <h1 class="text-4xl font-semibold mb-2">Contact</h1>
-            <h2 class="text-2xl">You can contact me by <a href="mailto:freezobusiness@gmail.com" class="text-blue-500 underline">Email</a>
-            or just send email to freezobusiness@gmail.com </h2>
+
+    <main class="main-content">
+        <section class="about-section">
+            <h1 class="mainh1">Contact</h1>
+            <p class="infop">
+                You can contact me by <a href="mailto:freezobusiness@gmail.com" class="next">Email</a> or just send email to freezobusiness@gmail.com
+            </p>
         </section>
     </main>
 
-    <footer class="bg-gray-800 text-white flex mt-10 justify-center">
-        <a href="https://www.instagram.com/learnpythonforfree/"><img src="Images/insta.png" alt="" width="50px" class="px-1 m-3"></a>
-        <a href="https://www.tiktok.com/@learnpythonforfre.e"><img src="Images/TikTok.png" alt="" width="50px" class="px-1 m-3"></a>
-        <a href="https://github.com/learnpythonfree/files.py"><img src="Images/github.png" alt="" width="50px" class="px-1 m-3"></a>
+    <footer class="footer">
+        <a href="https://www.instagram.com/learnpythonforfree/"><img src="Images/insta.png" alt="Instagram" width="50px" class="social-icon"></a>
+        <a href="https://www.tiktok.com/@learnpythonforfre.e"><img src="Images/TikTok.png" alt="TikTok" width="45px" class="social-icon"></a>
+        <a href="https://github.com/learnpythonfree/files.py"><img src="Images/github.png" alt="GitHub" width="50px" class="social-icon"></a> 
+        <p>&copy; <span id="year"></span> LearnPythonForFree. All rights reserved.</p>
     </footer>
 
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
