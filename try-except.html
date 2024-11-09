@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try-Except | LearnPythonForFree</title>
+    <meta name="description" content="Learn Python error handling using try-except for beginners.">
+    <meta name="keywords" content="python, try-except, error handling, beginners, LearnPythonForFree">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/Images/favicon-48x48.png" sizes="48x48" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="LearnPython" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <h2 class="subtitle">Learn Python For Free</h2>
+        <nav class="nav">
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <div class="drp">
+                <button class="language-button" id="languageButton" onclick="toggleDropdown()">☰</button>
+                <div class="dropdown" id="dropdown">
+                    <a href="hello_world.html" class="dropdown-link">Hello World</a>
+                <a href="variables.html" class="dropdown-link">Variables</a>
+                <a href="comments.html" class="dropdown-link">Comments</a>
+                <a href="print_statements.html" class="dropdown-link">Print Statements</a>
+                <a href="list.html" class="dropdown-link">Lists</a>
+                <a href="tuples.html" class="dropdown-link">Tuples</a>
+                <a href="input.html" class="dropdown-link">Input</a>
+                <a href="operators.html" class="dropdown-link">Operators</a>
+                <a href="if-else.html" class="dropdown-link">If-Else</a>
+                <a href="loops.html" class="dropdown-link">Loops</a>
+                <a href="functions.html" class="dropdown-link">Functions</a>
+                <a href="format-string.html" class="dropdown-link">Format-Strings</a>
+                <a href="/" class="dropdown-link">🏠︎</a>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="mainh1">TRY-EXCEPT</h1>
+        <p class="infop">
+            Python's <b>try-except</b> blocks are essential for handling errors gracefully. Errors, like invalid user input or missing files, can crash programs. With <b>try-except</b>, you can catch these errors and respond without interrupting your code.
+        </p>
+
+        <h2 class="mainh2">Basic Structure of Try-Except</h2>
+        <p class="infop">Here’s the basic format:</p>
+        <pre><code>try:
+    # Code that might cause an error
+except ErrorType:
+    # Code to handle the error if it happens</code></pre>
+
+        <h3>Example:</h3>
+        <pre><code>try:
+    num = int(input("Enter a number: "))  # Try to convert input to an integer
+    print("Your number is:", num)
+except ValueError:
+    print("Invalid input! Please enter a number.")</code></pre>
+
+        <h2 class="mainh2">Handling Multiple Exceptions</h2>
+        <p class="infop">You can catch different types of errors separately by using multiple <b>except</b> blocks:</p>
+        <pre><code>try:
+    num = int(input("Enter a number: "))
+    result = 10 / num
+except ValueError:
+    print("That's not a valid number!")
+except ZeroDivisionError:
+    print("You can't divide by zero!")</code></pre>
+
+        <h2 class="mainh2">Using a General Exception</h2>
+        <p class="infop">If you’re unsure about the specific error type, you can use a general <b>Exception</b> to catch all errors. It’s useful for debugging, but avoid it unless necessary.</p>
+        <pre><code>try:
+    num = int(input("Enter a number: "))
+    result = 10 / num
+except Exception as e:
+    print("An error occurred:", e)</code></pre>
+
+        <h2 class="mainh2">Finally Block</h2>
+        <p class="infop">The <b>finally</b> block always executes, whether an error occurs or not, making it useful for cleanup.</p>
+        <pre><code>try:
+    file = open("data.txt", "r")
+    data = file.read()
+except FileNotFoundError:
+    print("File not found.")
+finally:
+    file.close()
+    print("File closed.")</code></pre>
+
+        <h2 class="mainh2">Summary</h2>
+        <ul class="infoul">
+            <li>The <b>try</b> block runs code that might raise an error.</li>
+            <li>Each <b>except</b> block catches a specific error type.</li>
+            <li><b>finally</b> always runs, ensuring resources are cleaned up.</li>
+        </ul>
+
+        <h2 class="mainh2">Example: Full Try-Except Block</h2>
+        <pre><code>try:
+    num = int(input("Enter a number: "))
+    result = 100 / num
+    print("Result:", result)
+except ValueError:
+    print("Please enter a valid integer.")
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+finally:
+    print("End of try-except block.")</code></pre>
+
+        <h2 class="mainh2">Check out <a href="loops.html" class="next">Loops</a></h2>
+    </main>
+
+    <footer class="footer">
+        <a href="https://www.instagram.com/learnpythonforfree/"><img src="/Images/insta.png" alt="Instagram" width="50px" class="social-icon"></a>
+        <a href="https://www.tiktok.com/@learnpythonforfre.e"><img src="/Images/TikTok.png" alt="TikTok" width="45px" class="social-icon"></a>
+        <a href="https://github.com/learnpythonfree/files.py"><img src="/Images/github.png" alt="GitHub" width="50px" class="social-icon"></a>
+        <p id="copyrightt">&copy; <span id="year"></span> LearnPythonForFree. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops | LearnPythonForFree</title>
+    <meta name="description" content="Learn about Python for and while loops with explanations and examples for beginners.">
+    <meta name="keywords" content="python, for loop, while loop, loops, beginners, LearnPythonForFree">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/Images/favicon-48x48.png" sizes="48x48" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="LearnPython" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <h2 class="subtitle">Learn Python For Free</h2>
+        <nav class="nav">
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <div class="drp">
+                <button class="language-button" id="languageButton" onclick="toggleDropdown()">☰</button>
+                <div class="dropdown" id="dropdown">
+                    <a href="hello_world.html" class="dropdown-link">Hello World</a>
+                <a href="variables.html" class="dropdown-link">Variables</a>
+                <a href="comments.html" class="dropdown-link">Comments</a>
+                <a href="print_statements.html" class="dropdown-link">Print Statements</a>
+                <a href="list.html" class="dropdown-link">Lists</a>
+                <a href="tuples.html" class="dropdown-link">Tuples</a>
+                <a href="input.html" class="dropdown-link">Input</a>
+                <a href="operators.html" class="dropdown-link">Operators</a>
+                <a href="if-else.html" class="dropdown-link">If-Else</a>
+                <a href="/" class="dropdown-link">🏠︎</a>
+                <a href="functions.html" class="dropdown-link">Functions</a>
+                <a href="format-string.html" class="dropdown-link">Format-Strings</a>
+                <a href="try-except.html" class="dropdown-link">Try-Except</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="mainh1">LOOPS</h1>
+        <p class="infop">
+            Loops allow you to repeat a block of code multiple times. Python supports two types of loops: <b>for</b> loops and <b>while</b> loops. Let’s explore each of them!
+        </p>
+
+        <!-- FOR LOOP SECTION -->
+        <h2 class="mainh2">For Loops</h2>
+        <p class="infop">
+            The <code>for</code> loop in Python is used to iterate over a sequence (like a list, tuple, or string) or other iterable objects, executing a code block for each item.
+        </p>
+
+        <h3>Basic Structure of a <code>for</code> Loop</h3>
+        <pre><code>for item in sequence:
+    # code to execute for each item in the sequence</code></pre>
+        
+        <h3>Example:</h3>
+        <pre><code>fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+# Output:
+# apple
+# banana
+# cherry</code></pre>
+
+        <h3>Using <code>range()</code> with <code>for</code> Loops</h3>
+        <pre><code>for i in range(5):
+    print(i)
+# Output:
+# 0
+# 1
+# 2
+# 3
+# 4</code></pre>
+
+        <h3>Using <code>range()</code> with Start, Stop, and Step</h3>
+        <pre><code>for i in range(2, 10, 2):
+    print(i)
+# Output:
+# 2
+# 4
+# 6
+# 8</code></pre>
+
+        <!-- WHILE LOOP SECTION -->
+        <h2 class="mainh2">While Loops</h2>
+        <p class="infop">
+            A <code>while</code> loop in Python repeats a block of code as long as a specified condition is <code>True</code>. If the condition becomes <code>False</code>, the loop stops.
+        </p>
+
+        <h3>Basic Structure of a <code>while</code> Loop</h3>
+        <pre><code>while condition:
+    # code to execute while condition is True</code></pre>
+
+        <h3>Example:</h3>
+        <pre><code>counter = 0
+while counter < 5:
+    print("Counter:", counter)
+    counter += 1
+# Output:
+# Counter: 0
+# Counter: 1
+# Counter: 2
+# Counter: 3
+# Counter: 4</code></pre>
+
+        <h3>Using <code>break</code> and <code>continue</code> in <code>while</code> Loops</h3>
+        <p class="infop">
+            Just like in <code>for</code> loops, you can use <code>break</code> and <code>continue</code> statements in <code>while</code> loops.
+        </p>
+
+        <h4>Using <code>break</code>:</h4>
+        <pre><code>counter = 0
+while counter < 5:
+    if counter == 3:
+        break
+    print("Counter:", counter)
+    counter += 1
+# Output:
+# Counter: 0
+# Counter: 1
+# Counter: 2</code></pre>
+
+        <h4>Using <code>continue</code>:</h4>
+        <pre><code>counter = 0
+while counter < 5:
+    counter += 1
+    if counter == 3:
+        continue
+    print("Counter:", counter)
+# Output:
+# Counter: 1
+# Counter: 2
+# Counter: 4
+# Counter: 5</code></pre>
+
+        <h3>Using <code>else</code> with <code>while</code> Loops</h3>
+        <p class="infop">
+            Similar to <code>for</code> loops, you can use an <code>else</code> clause with a <code>while</code> loop. The <code>else</code> block runs only if the loop exits normally (i.e., without encountering a <code>break</code> statement).
+        </p>
+        <pre><code>counter = 0
+while counter < 3:
+    print("Counter:", counter)
+    counter += 1
+else:
+    print("Loop completed successfully.")
+# Output:
+# Counter: 0
+# Counter: 1
+# Counter: 2
+# Loop completed successfully.</code></pre>
+
+        <!-- SUMMARY SECTION -->
+        <h2 class="mainh2">Summary</h2>
+        <ul class="infoul">
+            <li><b>for</b> - Used for iterating over sequences like lists, tuples, or strings.</li>
+            <li><b>while</b> - Repeats a block of code while a condition is <code>True</code>.</li>
+            <li><b>break</b> - Exits the loop entirely.</li>
+            <li><b>continue</b> - Skips the current iteration and continues with the next.</li>
+            <li><b>else</b> - Executes if the loop completes normally without a <code>break</code>.</li>
+        </ul>
+
+        <h2 class="mainh2">Check out <a href="functions.html" class="next">Functions</a></h2>
+    </main>
+
+    <footer class="footer">
+        <a href="https://www.instagram.com/learnpythonforfree/"><img src="/Images/insta.png" alt="Instagram" width="50px" class="social-icon"></a>
+        <a href="https://www.tiktok.com/@learnpythonforfre.e"><img src="/Images/TikTok.png" alt="TikTok" width="45px" class="social-icon"></a>
+        <a href="https://github.com/learnpythonfree/files.py"><img src="/Images/github.png" alt="GitHub" width="50px" class="social-icon"></a>
+        <p id="copyright">&copy; <span id="year"></span> LearnPythonForFree. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,306 @@
+/* General Resets */
+
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%; /* Full height for html and body */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Change font family as desired */
+    background-color: #1E201E; /* Dark gray background */
+    color: #ECDFCC; /* Light beige text color */
+    line-height: 1.6; /* Improve readability */
+    display: flex;
+    flex-direction: column; /* Stack header, main, and footer vertically */
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* Header Styles */
+.header {
+    background-color: #1E201E; /* Keep header dark */
+    color: #ECDFCC; /* Light beige text color */
+    padding: 20px; /* Spacing around header */
+    text-align: center; /* Center align text */
+    border-bottom: 2px solid #ECDFCC; /* Light border at bottom */
+}
+
+.subtitle {
+    font-size: 34px; /* Subtitle font size */
+    font-family: "DynaPuff", sans-serif;
+    font-weight: 500;
+    color: rgb(255, 208, 52);
+}
+
+/* Main Styles */
+main {
+    flex: 1; /* Allow main content to take up remaining space */
+    padding: 20px; /* Padding around main content */
+}
+
+/* Navigation Styles */
+.nav {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: center; /* Center the navigation */
+    margin: 0px 0; /* Margin above and below nav */ 
+}
+
+.nav-link {
+    display: inline-block; /* Allow padding and margins */
+    background-color: transparent; /* Transparent background */
+    color: #ECDFCC; /* Light beige link color */
+    padding: 0px 15px; /* Padding for clickable area */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+}
+
+/* Hover Effect */
+.nav-link:hover {
+     /* Light beige background on hover */
+    /* Dark gray text on hover */
+    transform: scale(1.25); /* Slightly enlarge on hover */
+}
+
+.drp {
+    position: relative; /* Establish a positioning context for the dropdown */
+    display: inline-block; /* Keep it inline for layout */
+}
+
+/* Dropdown Button */
+.language-button {
+    color: #e8ffe8; /* Dark white text color */
+    font-size: 18px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0px 10px;
+}
+.language-button:hover{
+    transform: scale(1.25);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: -300%;
+    min-width: 200px;
+    background-color: #1e201edb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Start hidden */
+    transform: translateY(-10%);
+    z-index: 1;
+    backdrop-filter: blur(6px);
+    border: 2px solid #cc4a4a3f;
+    border-radius: 8px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+}
+
+
+.dropdown.show {
+    opacity: 1;
+    transform: translateY(0); /* Move to its normal position */
+    max-height: 500px; /* Controls the height of the dropdown */
+}
+/* Dropdown Links */
+.dropdown-link {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center links horizontally */
+    align-items: center; /* Center links vertically */
+    padding: 1px 15px; /* Padding for clickable area */
+    text-decoration: none; /* Remove underline */
+    color: #ECDFCC; /* Light beige text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effects */
+}
+.dropdown-link:hover {
+    background-color: #ECDFCC; /* Light beige background on hover */
+    color: #1E201E; /* Dark gray text on hover */
+}
+
+@media (max-width: 768px) {
+    .language-button{
+        padding: 5px 10px;
+    }
+    .dropdown-link{
+    padding: 4px;    
+    }
+}
+/* Footer Styles */
+.footer {
+    border-top: 2px solid #ECDFCC; /* Light border at bottom */
+    background-color: #1E201E; /* Dark background */
+    padding: 20px; /* Padding around footer */
+    text-align: center; /* Center align text and icons */
+}
+.social-icon {
+    margin: 0 10px; /* Spacing between icons */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    
+
+    .nav-link {
+        margin: 5px 0; /* Space out vertical links */
+    }
+}
+
+.link-list {
+    display: flex; /* Use flexbox to layout children */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line if necessary */
+    justify-content: center; /* Center the items horizontally */
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+.link-list li {
+    flex: 1; /* Allow each link to grow and fill available space */
+    margin: 10px; /* Add spacing between links */
+    min-width: 250px; /* Set a minimum width for better appearance */
+}
+
+.link-list a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+.main {
+    display: flex; /* Set to flex to align text properly */
+    justify-content: center; /* Center the text inside */
+    align-items: center; /* Center vertically */
+    background-color: #ECDFCC; /* Light beige background */
+    color: #1E201E; /* Dark gray text color */
+    padding: 15px; /* Padding for clickable area */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* Remove default button border */
+    text-decoration: none; /* Remove underline */
+    font-size: 30px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+    width: 100%; /* Take full width of the parent li */
+    
+}
+
+/* Hover Effect */
+.main:hover {
+    background-color: #1E201E; /* Dark gray background on hover */
+    color: #ECDFCC; /* Light beige text color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .main {
+        font-size: 20px; /* Adjust font size for better fit on small screens */
+    }
+}
+
+
+.mainh1{
+    font-size: 2.5rem; /* Corresponds to text-5xl */
+    /* margin-left: 1.25rem; Corresponds to ml-5 */
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.mainh2{
+    font-size: 2rem;
+    margin-bottom: 2%;
+
+}
+
+.infop{
+    font-size: 1.5rem; /* Corresponds to text-5xl */
+    /* margin-left: 1.25rem; Corresponds to ml-5 */
+    margin-bottom: 2%;
+    text-align: justify;
+}
+
+h3{
+    font-size: 1.7rem;
+    margin-bottom: 2%;
+}
+
+.infoul{
+    font-size: 1.5rem; /* Corresponds to text-5xl */
+    /* margin-left: 1.25rem; Corresponds to ml-5 */
+    margin-bottom: 2%;
+    margin-left: 4%;
+    text-align: justify;
+}
+
+ol{
+    font-size: 1.5rem; /* Corresponds to text-5xl */
+    /* margin-left: 1.25rem; Corresponds to ml-5 */
+    margin-bottom: 2%;
+    margin-left: 4%;
+    text-align: justify;
+}
+
+
+pre {
+    background-color: #282c34; /* Dark background for the code block */
+    color: #f8f8f2; /* Light text color for code */
+    padding: 0px; /* Padding around the code */
+    border-radius: 8px; /* Rounded corners */
+    text-align: left; /* Left align text in preformatted text */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    white-space: pre; /* Prevent line wrapping */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    margin: 0; /* Remove top and bottom margins */
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#copyrightt{
+    margin-top: 20px;
+}
+
+.next{
+    text-decoration: none;
+    color: rgb(144, 144, 255);
+}
+code{
+    font-size: large;
+}
+
+/* .builtFunc{
+    color: rgb(248, 255, 154);
+}
+.string{
+    color: rgb(255, 144, 144);
+}
+
+.variable{
+    color: rgb(134, 237, 255);
+}
+
+.integer{
+    color: rgb(140, 255, 140);
+}
+.bool{
+    color: rgb(79, 79, 255);
+} */

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World | Learn Python For Free</title>
+    <meta name="description" content="Welcome to LearnPythonForFree, where you learn python for free.">
+    <meta name="keywords" content="python, learnpythonforfree, learnpython, free, for free">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/Images/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/Images/favicon.svg" />
+    <link rel="shortcut icon" href="/Images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="LearnPython" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>LearnPython</title>
+
+    <!-- hljs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+
+</head>
+
+<body>
+    <header class="header">
+        <h2 class="subtitle">Learn Python For Free</h2>
+        <nav class="nav">
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+           <div class="drp"><button class="language-button" id="languageButton" onclick="toggleDropdown()">☰</button>
+            <div class="dropdown" id="dropdown">
+                <a href="/" class="dropdown-link">🏠︎</a>
+                <a href="variables.html" class="dropdown-link">Variables</a>
+                <a href="comments.html" class="dropdown-link">Comments</a>
+                <a href="print_statements.html" class="dropdown-link">Print Statements</a>
+                <a href="list.html" class="dropdown-link">Lists</a>
+                <a href="tuples.html" class="dropdown-link">Tuples</a>
+                <a href="input.html" class="dropdown-link">Input</a>
+                <a href="operators.html" class="dropdown-link">Operators</a>
+                <a href="if-else.html" class="dropdown-link">If-Else</a>
+                <a href="loops.html" class="dropdown-link">Loops</a>
+                <a href="functions.html" class="dropdown-link">Functions</a>
+                <a href="format-string.html" class="dropdown-link">Format-Strings</a>
+                <a href="try-except.html" class="dropdown-link">Try-Except</a>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="mainh1">HELLO WORLD</h1>
+        <p class="infop">
+            In Python, the "Hello, World!" program is as simple as it gets. You can print "Hello, World!" to the console with just one line:
+        </p>
+        <pre><code class="language-python">print("Hello, World!")
+# Output Hello, World!</code></pre>
+        <p class="infop">
+            The print() function is a built-in function in Python that outputs data to the console or standard output device. It can take various arguments and has several parameters that allow you to control its behavior. The print function is not a reserved keyword; you can technically create a variable named print (though it is not recommended because it would overshadow the built-in function). This distinction between functions and keywords is crucial in understanding how Python works and how to write effective code. Don't Worry you will know about this as you learn python. So stick to this course and check about <a href="variables.html" class="next"> Variables </a>
+        </p>
+    </main>
+
+    <footer class="footer">
+        <a href="https://www.instagram.com/learnpythonforfree/"><img src="/Images/insta.png" alt="Instagram" width="50px" class="social-icon"></a>
+        <a href="https://www.tiktok.com/@learnpythonforfre.e"><img src="/Images/TikTok.png" alt="TikTok" width="45px" class="social-icon"></a>
+        <a href="https://github.com/learnpythonfree/files.py"><img src="/Images/github.png" alt="GitHub" width="50px" class="social-icon"></a>
+        <p id="copyrightt">&copy; <span id="year"></span> LearnPythonForFree. All rights reserved.</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- hljs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+
+</body>
+</html>

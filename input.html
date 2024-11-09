@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input | LearnPythonForFree</title>
+    <meta name="description" content="Learn about Python's input function to gather user input and interact with your program.">
+    <meta name="keywords" content="python, input, user input, learnpythonforfree, free tutorial">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/Images/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/Images/favicon.svg" />
+    <link rel="shortcut icon" href="/Images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="LearnPython" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <h2 class="subtitle">Learn Python For Free</h2>
+        <nav class="nav">
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <div class="drp">
+                <button class="language-button" id="languageButton" onclick="toggleDropdown()">☰</button>
+                <div class="dropdown" id="dropdown">
+                    <a href="hello_world.html" class="dropdown-link">Hello World</a>
+                <a href="variables.html" class="dropdown-link">Variables</a>
+                <a href="comments.html" class="dropdown-link">Comments</a>
+                <a href="print_statements.html" class="dropdown-link">Print Statements</a>
+                <a href="list.html" class="dropdown-link">Lists</a>
+                <a href="tuples.html" class="dropdown-link">Tuples</a>
+                <a href="/" class="dropdown-link">🏠︎</a>
+                <a href="operators.html" class="dropdown-link">Operators</a>
+                <a href="if-else.html" class="dropdown-link">If-Else</a>
+                <a href="loops.html" class="dropdown-link">Loops</a>
+                <a href="functions.html" class="dropdown-link">Functions</a>
+                <a href="format-string.html" class="dropdown-link">Format-Strings</a>
+                <a href="try-except.html" class="dropdown-link">Try-Except</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="mainh1">INPUT</h1>
+        <p class="infop">
+            The <b>input()</b> function in Python is used to gather user input. It's a simple way to make your programs interactive by asking the user to enter information that your program can use.
+        </p>
+        
+        <h2 class="mainh2">Basic Usage of input()</h2>
+        <p class="infop">
+            The <code>input()</code> function reads a line of text entered by the user, which it returns as a string. You can optionally provide a prompt to guide the user.
+        </p>
+        <pre><code># Basic input with prompt
+name = input("Enter your name: ")
+print("Hello, " + name + "!")</code></pre>
+        
+        <h2 class="mainh2">Converting Input to Other Data Types</h2>
+        <p class="infop">
+            Since <code>input()</code> returns a string, you may need to convert the input to another data type, like an integer or float, using functions like <code>int()</code> or <code>float()</code>.
+        </p>
+        <pre><code># Converting input to an integer
+age = int(input("Enter your age: "))
+print("You are " + str(age) + " years old.")</code></pre>
+        
+        <h2 class="mainh2">Using input() with Calculations</h2>
+        <p class="infop">
+            You can use <code>input()</code> to get numbers from users and perform calculations.
+        </p>
+        <pre><code># Getting two numbers and adding them
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+result = num1 + num2
+print("The sum is:", result)</code></pre>
+        
+        <h2 class="mainh2">Error Handling with input()</h2>
+        <p class="infop">
+            If you expect numeric input, it's a good idea to handle errors in case the user enters non-numeric data.
+        </p>
+        <pre><code># Handling invalid input with try-except
+try:
+    number = int(input("Enter a whole number: "))
+    print("You entered:", number)
+except ValueError:
+    print("Invalid input! Please enter a number.")</code></pre>
+    <p class="infop">You can Learn about <a href="try-except.html" class="next">try except</a></p>
+
+        <h2 class="mainh2">input() in Python 2 vs Python 3</h2>
+        <p class="infop">
+            In Python 2, <code>input()</code> automatically tries to evaluate user input, which can lead to security risks. In Python 3, <code>input()</code> is safer, as it treats everything as a string.
+        </p>
+
+        <h2 class="mainh2">Summary of input() Key Points</h2>
+        <ul class="infoul">
+            <li><b>input()</b> is used to take user input as a string in Python 3.</li>
+            <li>Convert the input to other data types (e.g., <code>int</code>, <code>float</code>) as needed.</li>
+            <li>Use <code>try</code>-<code>except</code> blocks to handle errors if expecting specific data types.</li>
+        </ul>
+        
+        <h2 class="mainh2">Example Summary</h2>
+        <pre><code># Get user's name and age, and display a message
+name = input("What's your name? ")
+age = int(input("How old are you? "))
+print(f"Hello {name}, you are {age} years old!")</code></pre>
+<p class="infop">You can learn about <a href="format-string.html" class="next"> f strings</a></p>
+
+        <h2 class="mainh2">Check out <a href="operators.html" class="next">Operators</a></h2>
+    </main>
+
+    <footer class="footer">
+        <a href="https://www.instagram.com/learnpythonforfree/"><img src="/Images/insta.png" alt="Instagram" width="50px" class="social-icon"></a>
+        <a href="https://www.tiktok.com/@learnpythonforfre.e"><img src="/Images/TikTok.png" alt="TikTok" width="45px" class="social-icon"></a>
+        <a href="https://github.com/learnpythonfree/files.py"><img src="/Images/github.png" alt="GitHub" width="50px" class="social-icon"></a>
+        <p id="copyrightt">&copy; <span id="year"></span> LearnPythonForFree. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- hljs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators | LearnPythonForFree</title>
+    <meta name="description" content="Learn about Python operators: comparison, arithmetic, and logical, with examples.">
+    <meta name="keywords" content="python, operators, comparison, arithmetic, logical, beginners, LearnPythonForFree">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/Images/favicon-48x48.png" sizes="48x48" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="LearnPython" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <h2 class="subtitle">Learn Python For Free</h2>
+        <nav class="nav">
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <div class="drp">
+                <button class="language-button" id="languageButton" onclick="toggleDropdown()">☰</button>
+                <div class="dropdown" id="dropdown">
+                    <a href="hello_world.html" class="dropdown-link">Hello World</a>
+                <a href="variables.html" class="dropdown-link">Variables</a>
+                <a href="comments.html" class="dropdown-link">Comments</a>
+                <a href="print_statements.html" class="dropdown-link">Print Statements</a>
+                <a href="list.html" class="dropdown-link">Lists</a>
+                <a href="tuples.html" class="dropdown-link">Tuples</a>
+                <a href="input.html" class="dropdown-link">Input</a>
+                <a href="/" class="dropdown-link">🏠︎</a>
+                <a href="if-else.html" class="dropdown-link">If-Else</a>
+                <a href="loops.html" class="dropdown-link">Loops</a>
+                <a href="functions.html" class="dropdown-link">Functions</a>
+                <a href="format-string.html" class="dropdown-link">Format-Strings</a>
+                <a href="try-except.html" class="dropdown-link">Try-Except</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="mainh1">BASIC OPERATORS</h1>
+        <p class="infop">
+            Python provides a variety of operators to perform comparisons, calculations, and logical operations. Understanding these operators is essential for building conditions, performing calculations, and controlling program flow.
+        </p>
+
+        <h2 class="mainh2">Comparison Operators</h2>
+        <p class="infop">
+            Comparison operators are used to compare two values. They return <b>True</b> or <b>False</b> based on the condition. These are essential in programming for making decisions and checking conditions.
+        </p>
+        <ul class="infoul">
+            <li><code>==</code> means <b>Equal</b></li>
+            <li><code>!=</code> means <b>Not Equal</b></li>
+            <li><code>&gt;</code> means <b>Greater than</b></li>
+            <li><code>&lt;</code> means <b>Lesser than</b></li>
+            <li><code>&gt;=</code> means <b>Greater than or Equal</b></li>
+            <li><code>&lt;=</code> means <b>Lesser than or Equal</b></li>
+        </ul>
+        <p>Example:</p>
+        <pre><code>print(5 == 8)  # Output -> False
+print(5 != 8)  # Output -> True
+print(5 > 8)   # Output -> False
+print(5 < 8)   # Output -> True
+print(5 >= 8)  # Output -> False
+print(5 <= 8)  # Output -> True</code></pre>
+
+        <h2 class="mainh2">Arithmetic Operators</h2>
+        <p class="infop">
+            Arithmetic operators perform basic mathematical operations. These operators are useful for any kind of calculation, from addition to exponentiation.
+        </p>
+        <ul class="infoul">
+            <li><code>+</code> means <b>Addition</b></li>
+            <li><code>-</code> means <b>Subtraction</b></li>
+            <li><code>*</code> means <b>Multiplication</b></li>
+            <li><code>/</code> means <b>Division</b></li>
+            <li><code>//</code> means <b>Floor Division</b> (division that rounds down to the nearest whole number)</li>
+            <li><code>**</code> means <b>Exponentiation</b> (raises one number to the power of another)</li>
+            <li><code>%</code> means <b>Modulus</b> (returns the remainder after division)</li>
+        </ul>
+        <p>Example:</p>
+        <pre><code>print(5 + 8)    # Output -> 13
+print(5 - 8)    # Output -> -3
+print(5 * 8)    # Output -> 40
+print(5 / 8)    # Output -> 0.625
+print(5 ** 8)   # Output -> 390625
+print(5 // 8)   # Output -> 0
+print(5 % 8)    # Output -> 5</code></pre>
+
+        <h2 class="mainh2">Logical Operators</h2>
+        <p class="infop">
+            Logical operators allow you to combine multiple conditions. Python uses the keywords <b>and</b>, <b>or</b>, and <b>not</b> to perform these operations.
+        </p>
+        <ul class="infoul">
+            <li><b>and</b> - Returns True if both conditions are True.</li>
+            <li><b>or</b> - Returns True if at least one condition is True.</li>
+            <li><b>not</b> - Reverses the Boolean value (if True, it makes it False and vice versa).</li>
+        </ul>
+        <p>Example:</p>
+        <pre><code>print(10 > 5 and 8 > 3)  # Output -> True (both conditions are true)
+print(10 > 5 or 8 < 3)   # Output -> True (one condition is true)
+print(not(10 > 5))       # Output -> False (not inverts the true condition)</code></pre>
+
+        <h2 class="mainh2">Summary</h2>
+        <ul class="infoul">
+            <li><b>Comparison Operators</b> compare two values and return True or False.</li>
+            <li><b>Arithmetic Operators</b> perform mathematical calculations.</li>
+            <li><b>Logical Operators</b> combine conditions to create complex Boolean expressions.</li>
+        </ul>
+
+        <h2 class="mainh2">Example: Putting It All Together</h2>
+        <pre><code># Combining all operators in one example
+a = 10
+b = 5
+print((a > b) and (a + b > 12))    # Output -> True
+print((a > b) or (a + b < 12))     # Output -> True
+print(not(a > b))                  # Output -> False</code></pre>
+
+        <h2 class="mainh2">Check out <a href="if-else.html" class="next">If-Else</a></h2>
+    </main>
+
+    <footer class="footer">
+        <a href="https://www.instagram.com/learnpythonforfree/"><img src="/Images/insta.png" alt="Instagram" width="50px" class="social-icon"></a>
+        <a href="https://www.tiktok.com/@learnpythonforfre.e"><img src="/Images/TikTok.png" alt="TikTok" width="45px" class="social-icon"></a>
+        <a href="https://github.com/learnpythonfree/files.py"><img src="/Images/github.png" alt="GitHub" width="50px" class="social-icon"></a>
+        <p id="copyrightt">&copy; <span id="year"></span> LearnPythonForFree. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

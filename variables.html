@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables | LearnPythonForFree</title>
+    <meta name="description" content="Welcome to LearnPythonForFree, where you learn python for free.">
+    <meta name="keywords" content="python, learnpythonforfree, learnpython, free, for free">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/Images/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/Images/favicon.svg" />
+    <link rel="shortcut icon" href="/Images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="LearnPython" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>LearnPython</title>
+
+  <!-- hljs -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+
+</head>
+
+<body>
+    <header class="header">
+        <h2 class="subtitle">Learn Python For Free</h2>
+        <nav class="nav">
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+           <div class="drp"><button class="language-button" id="languageButton" onclick="toggleDropdown()">☰</button>
+            <div class="dropdown" id="dropdown">
+                <a href="hello_world.html" class="dropdown-link">Hello World</a>
+                <a href="/" class="dropdown-link">🏠︎</a>                <a href="comments.html" class="dropdown-link">Comments</a>
+                <a href="print_statements.html" class="dropdown-link">Print Statements</a>
+                <a href="list.html" class="dropdown-link">Lists</a>
+                <a href="tuples.html" class="dropdown-link">Tuples</a>
+                <a href="input.html" class="dropdown-link">Input</a>
+                <a href="operators.html" class="dropdown-link">Operators</a>
+                <a href="if-else.html" class="dropdown-link">If-Else</a>
+                <a href="loops.html" class="dropdown-link">Loops</a>
+                <a href="functions.html" class="dropdown-link">Functions</a>
+                <a href="format-string.html" class="dropdown-link">Format-Strings</a>
+                <a href="try-except.html" class="dropdown-link">Try-Except</a>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="mainh1">VARIABLES</h1>
+        <p class="infop">
+            A variable is a symbolic name that is a reference or pointer to an object. Once a variable is assigned a value, it points to the object holding that value. Variables in Python do not need an explicit declaration to reserve memory space, as the assignment operation automatically binds the variable to the data. <b>IN SIMPLE WORDS</b> variables are like container which you can store strings(alphabets), integer(numbers), boolean(True or False), etc...
+        </p>
+        
+        <pre><code>a = 82 
+print(a)
+# Output 82
+</code></pre>
+
+        <h2 class="mainh2">Why Use Variables?</h2>
+        <p class="infop">Variables are important because they allow you to: <b> Store data </b> that can change while your program is running (like a score in a game). Make your code easier to read and manage. Avoid repeating the same value multiple times in your code. <b> Naming Variables:</b> You can name a variable almost anything you want, but there are some rules: It must start with a letter (a-z, A-Z) or an underscore (_). It can contain letters, numbers (0-9), and underscores, but no spaces. It cannot start with a number. Variable names are case-sensitive (e.g., myVariable and myvariable are different). You can assign a value to a variable using the = sign. Like the example You saw above. Make sure to learn about<a href="comments.html" class="next"> Comments </a></p>
+    </main>
+
+    <footer class="footer">
+        <a href="https://www.instagram.com/learnpythonforfree/"><img src="/Images/insta.png" alt="Instagram" width="50px" class="social-icon"></a>
+        <a href="https://www.tiktok.com/@learnpythonforfre.e"><img src="/Images/TikTok.png" alt="TikTok" width="45px" class="social-icon"></a>
+        <a href="https://github.com/learnpythonfree/files.py"><img src="/Images/github.png" alt="GitHub" width="50px" class="social-icon"></a>
+        <p id="copyrightt">&copy; <span id="year"></span> LearnPythonForFree. All rights reserved.</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- hljs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

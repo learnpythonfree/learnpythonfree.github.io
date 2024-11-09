@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions | LearnPythonForFree</title>
+    <meta name="description" content="Learn about Python functions with explanations, syntax, and examples for beginners.">
+    <meta name="keywords" content="python, functions, beginners, LearnPythonForFree">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/Images/favicon-48x48.png" sizes="48x48" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="LearnPython" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <h2 class="subtitle">Learn Python For Free</h2>
+        <nav class="nav">
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <div class="drp">
+                <button class="language-button" id="languageButton" onclick="toggleDropdown()">☰</button>
+                <div class="dropdown" id="dropdown">
+                <a href="hello_world.html" class="dropdown-link">Hello World</a>
+                <a href="variables.html" class="dropdown-link">Variables</a>
+                <a href="comments.html" class="dropdown-link">Comments</a>
+                <a href="print_statements.html" class="dropdown-link">Print Statements</a>
+                <a href="list.html" class="dropdown-link">Lists</a>
+                <a href="tuples.html" class="dropdown-link">Tuples</a>
+                <a href="input.html" class="dropdown-link">Input</a>
+                <a href="operators.html" class="dropdown-link">Operators</a>
+                <a href="if-else.html" class="dropdown-link">If-Else</a>
+                <a href="loops.html" class="dropdown-link">Loops</a>
+                <a href="/" class="dropdown-link">🏠︎</a>
+                 <a href="format-string.html" class="dropdown-link">Format-Strings</a>
+                <a href="try-except.html" class="dropdown-link">Try-Except</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="mainh1">FUNCTIONS</h1>
+        <p class="infop">
+            Functions allow you to group code into reusable blocks, making programs easier to read, write, and maintain. A function can accept inputs, process data, and return outputs. Let's dive into how functions work in Python!
+        </p>
+
+        <!-- DEFINING FUNCTIONS -->
+        <h2 class="mainh2">Defining a Function</h2>
+        <p class="infop">
+            You define a function in Python using the <code>def</code> keyword, followed by the function name, parentheses (for parameters), and a colon. The code inside the function is indented.
+        </p>
+
+        <h3>Basic Structure of a Function</h3>
+        <pre><code>def function_name(parameters):
+    # code to execute
+    return result  # Optional</code></pre>
+
+        <h3>Example:</h3>
+        <pre><code>def greet(name):
+    return "Hello, " + name
+
+print(greet("Alice"))
+# Output: Hello, Alice</code></pre>
+
+        <!-- FUNCTION PARAMETERS -->
+        <h2 class="mainh2">Function Parameters and Arguments</h2>
+        <p class="infop">
+            Functions can accept parameters, allowing them to process different data. Parameters are variables listed in the function definition, while arguments are the values passed to the function when called.
+        </p>
+
+        <h3>Example with Parameters:</h3>
+        <pre><code>def add(a, b):
+    return a + b
+
+print(add(5, 3))
+# Output: 8</code></pre>
+
+        <!-- DEFAULT PARAMETERS -->
+        <h2 class="mainh2">Default Parameters</h2>
+        <p class="infop">
+            Default parameters allow you to specify default values for parameters. If an argument is not passed, the default value is used.
+        </p>
+
+        <h3>Example:</h3>
+        <pre><code>def greet(name="User"):
+    return "Hello, " + name
+
+print(greet())       # Output: Hello, User
+print(greet("Bob"))  # Output: Hello, Bob</code></pre>
+
+        <!-- RETURN STATEMENTS -->
+        <h2 class="mainh2">Return Statement</h2>
+        <p class="infop">
+            The <code>return</code> statement ends the function and returns a value to the caller. If there is no <code>return</code> statement, the function returns <code>None</code> by default.
+        </p>
+
+        <h3>Example:</h3>
+        <pre><code>def square(x):
+    return x * x
+
+result = square(4)
+print(result)
+# Output: 16</code></pre>
+
+        <!-- TYPES OF ARGUMENTS -->
+        <h2 class="mainh2">Types of Arguments</h2>
+        <p class="infop">
+            Python supports various types of arguments in functions, such as positional, keyword, arbitrary, and keyword-only arguments. Here’s a quick overview:
+        </p>
+
+        <h3>1. Positional Arguments</h3>
+        <p class="infop">
+            Arguments passed by position. The order matters.
+        </p>
+        <pre><code>def subtract(a, b):
+    return a - b
+
+print(subtract(10, 5))  # Output: 5</code></pre>
+
+        <h3>2. Keyword Arguments</h3>
+        <p class="infop">
+            Arguments can also be passed by explicitly mentioning parameter names. The order doesn’t matter in this case.
+        </p>
+        <pre><code>def multiply(a, b):
+    return a * b
+
+print(multiply(b=4, a=3))  # Output: 12</code></pre>
+
+        <h3>3. Arbitrary Arguments (<code>*args</code>)</h3>
+        <p class="infop">
+            Use <code>*args</code> to pass a variable number of positional arguments as a tuple.
+        </p>
+        <pre><code>def sum_all(*args):
+    total = 0
+    for num in args:
+        total += num
+    return total
+
+print(sum_all(1, 2, 3, 4))  # Output: 10</code></pre>
+
+        <h3>4. Keyword-Only Arguments (<code>**kwargs</code>)</h3>
+        <p class="infop">
+            Use <code>**kwargs</code> to pass a variable number of keyword arguments as a dictionary.
+        </p>
+        <pre><code>def print_info(**kwargs):
+    for key, value in kwargs.items():
+        print(key + ":", value)
+
+print_info(name="Alice", age=25)
+# Output:
+# name: Alice
+# age: 25</code></pre>
+
+        <!-- LAMBDA FUNCTIONS -->
+        <h2 class="mainh2">Lambda Functions</h2>
+        <p class="infop">
+            Lambda functions are small anonymous functions defined with the <code>lambda</code> keyword. They can have any number of parameters, but only one expression.
+        </p>
+
+        <h3>Example:</h3>
+        <pre><code>double = lambda x: x * 2
+print(double(5))
+# Output: 10</code></pre>
+
+        <!-- SUMMARY -->
+        <h2 class="mainh2">Summary</h2>
+        <ul class="infoul">
+            <li><b>def</b> - Defines a function.</li>
+            <li><b>return</b> - Returns a value from the function to the caller.</li>
+            <li><b>Parameters</b> - Variables listed in the function definition.</li>
+            <li><b>Arguments</b> - Values passed to the function when called.</li>
+            <li><b>*args</b> - Accepts variable numbers of positional arguments.</li>
+            <li><b>**kwargs</b> - Accepts variable numbers of keyword arguments.</li>
+            <li><b>lambda</b> - Defines an anonymous function.</li>
+        </ul>
+
+        <h2 class="mainh2">Check out <a href="format-string.html" class="next">Format Strings</a></h2>
+    </main>
+
+    <footer class="footer">
+        <a href="https://www.instagram.com/learnpythonforfree/"><img src="/Images/insta.png" alt="Instagram" width="50px" class="social-icon"></a>
+        <a href="https://www.tiktok.com/@learnpythonforfre.e"><img src="/Images/TikTok.png" alt="TikTok" width="45px" class="social-icon"></a>
+        <a href="https://github.com/learnpythonfree/files.py"><img src="/Images/github.png" alt="GitHub" width="50px" class="social-icon"></a>
+        <p id="copyright">&copy; <span id="year"></span> LearnPythonForFree. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

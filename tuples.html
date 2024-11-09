@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuples | Learn Python For Free</title>
+    <meta name="description" content="Learn about tuples in Python with LearnPythonForFree.">
+    <meta name="keywords" content="python, tuples, learnpythonforfree, learnpython, data structure">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/Images/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/Images/favicon.svg" />
+    <link rel="shortcut icon" href="/Images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="LearnPython" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <h2 class="subtitle">Learn Python For Free</h2>
+        <nav class="nav">
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <div class="drp">
+                <button class="language-button" id="languageButton" onclick="toggleDropdown()">☰</button>
+                <div class="dropdown" id="dropdown">
+                    <a href="hello_world.html" class="dropdown-link">Hello World</a>
+                <a href="variables.html" class="dropdown-link">Variables</a>
+                <a href="comments.html" class="dropdown-link">Comments</a>
+                <a href="print_statements.html" class="dropdown-link">Print Statements</a>
+                <a href="list.html" class="dropdown-link">Lists</a>
+                <a href="/" class="dropdown-link">🏠︎</a>
+                <a href="input.html" class="dropdown-link">Input</a>
+                <a href="operators.html" class="dropdown-link">Operators</a>
+                <a href="if-else.html" class="dropdown-link">If-Else</a>
+                <a href="loops.html" class="dropdown-link">Loops</a>
+                <a href="functions.html" class="dropdown-link">Functions</a>
+                <a href="format-string.html" class="dropdown-link">Format-Strings</a>
+                <a href="try-except.html" class="dropdown-link">Try-Except</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<main>
+    <h1 class="mainh1">TUPLES</h1>
+    <p class="infop">
+        A <b>Tuple()</b> is a built-in data structure in Python that is used to store an ordered collection of items. Unlike lists, tuples are <b>immutable</b>, meaning that their elements cannot be modified after creation.
+    </p>
+    
+    <h2 class="mainh2">Key Features of Tuples</h2>
+    <p class="infop">
+        <ul>
+            <li class="infoul">Ordered: Tuples maintain the order of elements.</li>
+            <li class="infoul">Immutable: Once created, you cannot modify, add, or remove elements.</li>
+            <li class="infoul">Indexed: Each element in a tuple has an index for access.</li>
+            <li class="infoul">Allow Duplicates: Tuples can contain duplicate elements.</li>
+        </ul>
+    </p>
+
+    <h2 class="mainh2">Creating a Tuple</h2>
+    <p class="infop">You can create a tuple by enclosing elements in parentheses <code>()</code>, separated by commas.</p>
+    <pre><code># An empty tuple
+my_tuple = ()
+
+# A tuple with elements
+my_tuple = (1, 2, "apple", 3.5)</code></pre>
+
+    <h2 class="mainh2">Accessing Elements in a Tuple</h2>
+    <p class="infop">Tuples use zero-based indexing, meaning the first item has an index of 0.</p>
+    <pre><code># Accessing the first element
+print(my_tuple[0])  # Output: 1
+
+# Accessing the last element
+print(my_tuple[-1])  # Output: 3.5</code></pre>
+
+    <h2 class="mainh2">Tuple Packing and Unpacking</h2>
+    <p class="infop">
+        Tuples support packing and unpacking, allowing you to assign multiple values in a single line.
+    </p>
+    <pre><code># Packing values into a tuple
+packed_tuple = 1, "apple", 3.5
+
+# Unpacking tuple values
+a, b, c = packed_tuple
+print(a)  # Output: 1
+print(b)  # Output: "apple"
+print(c)  # Output: 3.5</code></pre>
+
+    <h2 class="mainh2">Common Tuple Operations</h2>
+    <h3>Length of a Tuple</h3>
+    <p class="infop">Use <code>len()</code> to get the number of elements in a tuple.</p>
+    <pre><code>my_tuple = (1, "apple", 3.5)
+print(len(my_tuple))  # Output: 3</code></pre>
+
+    <h3>Checking if an Element is in the Tuple</h3>
+    <p class="infop">Use the <code>in</code> keyword.</p>
+    <pre><code>if "apple" in my_tuple:
+    print("Apple is in the tuple!")</code></pre>
+
+    <h3>Slicing Tuples</h3>
+    <p class="infop">Slicing allows you to get a subset of the tuple.</p>
+    <pre><code>numbers = (1, 2, 3, 4, 5)
+print(numbers[1:4])  # Output: (2, 3, 4)
+print(numbers[:3])   # Output: (1, 2, 3)
+print(numbers[2:])   # Output: (3, 4, 5)</code></pre>
+    <p class="infop">NOTE! IN numbers[1:4] 1 IS INCLUDED WHILE THE INDEX 4 IS NOT INCLUDED!</p>
+    <h2 class="mainh2">Tuple Methods Summary</h2>
+    <p class="infop">
+        <b><i>count()</i></b>: Counts the occurrences of a specific element <br>
+        <b><i>index()</i></b>: Returns the index of the first occurrence of an element <br>
+    </p>
+
+    <h2 class="mainh2">Example: Summary</h2>
+    <pre><code># Creating and accessing elements in a tuple
+my_tuple = (1, "banana", 3.5)
+print(my_tuple[0])  # Output: 1
+
+# Packing and unpacking
+person = ("Alice", 25, "Engineer")
+name, age, profession = person
+print(name)  # Output: Alice
+print(age)   # Output: 25</code></pre>
+
+    <h2 class="mainh2">SUMMARY</h2>
+    <ul class="infoul">
+        <li>Tuples are ordered and immutable collections.</li>
+        <li>They are useful for fixed data that shouldn't change.</li>
+        <li>They support basic operations like slicing, packing/unpacking, and indexing.</li>
+    </ul>
+
+    <h2 class="mainh2">Check out <a href="input.html" class="next">Input</a></h2>
+</main>
+
+<footer class="footer">
+    <a href="https://www.instagram.com/learnpythonforfree/"><img src="/Images/insta.png" alt="Instagram" width="50px" class="social-icon"></a>
+    <a href="https://www.tiktok.com/@learnpythonforfre.e"><img src="/Images/TikTok.png" alt="TikTok" width="45px" class="social-icon"></a>
+    <a href="https://github.com/learnpythonfree/files.py"><img src="/Images/github.png" alt="GitHub" width="50px" class="social-icon"></a>
+    <p id="copyright">&copy; <span id="year"></span> LearnPythonForFree. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</body>
+</html>

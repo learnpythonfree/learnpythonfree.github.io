@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Format Strings | LearnPythonForFree</title>
+    <meta name="description" content="Learn how to format strings in Python with f-strings and other methods.">
+    <meta name="keywords" content="python, format strings, f-strings, beginners, LearnPythonForFree">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/Images/favicon-48x48.png" sizes="48x48" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="LearnPython" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <h2 class="subtitle">Learn Python For Free</h2>
+        <nav class="nav">
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <div class="drp">
+                <button class="language-button" id="languageButton" onclick="toggleDropdown()">☰</button>
+                <div class="dropdown" id="dropdown">
+                <a href="hello_world.html" class="dropdown-link">Hello World</a>
+                <a href="variables.html" class="dropdown-link">Variables</a>
+                <a href="comments.html" class="dropdown-link">Comments</a>
+                <a href="print_statements.html" class="dropdown-link">Print Statements</a>
+                <a href="list.html" class="dropdown-link">Lists</a>
+                <a href="tuples.html" class="dropdown-link">Tuples</a>
+                <a href="input.html" class="dropdown-link">Input</a>
+                <a href="operators.html" class="dropdown-link">Operators</a>
+                <a href="if-else.html" class="dropdown-link">If-Else</a>
+                <a href="loops.html" class="dropdown-link">Loops</a>
+                <a href="functions.html" class="dropdown-link">Functions</a>
+                <a href="/" class="dropdown-link">🏠︎</a>
+                <a href="try-except.html" class="dropdown-link">Try-Except</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="mainh1">FORMAT STRINGS</h1>
+        <p class="infop">
+            Python provides several ways to format strings, making it easy to include variables or expressions in text output. The most popular and modern method is <b>f-strings</b>, introduced in Python 3.6. We’ll also cover other methods for compatibility.
+        </p>
+
+        <h2 class="mainh2">1. Using F-Strings (Recommended)</h2>
+        <p class="infop">
+            F-strings (formatted string literals) are a powerful and easy-to-read way to embed variables or expressions in strings. Just prefix the string with an <b>f</b> and use curly braces <code>{ }</code> to insert variables.
+        </p>
+        <pre><code>name = "Alice"
+age = 25
+print(f"Hello, my name is {name} and I am {age} years old.")  
+# Output: Hello, my name is Alice and I am 25 years old.</code></pre>
+
+        <h2 class="mainh2">2. Format Method</h2>
+        <p class="infop">
+            Before f-strings, the <b>.format()</b> method was commonly used. This method places values into placeholders marked by curly braces <code>{ }</code>.
+        </p>
+        <pre><code>name = "Alice"
+age = 25
+print("Hello, my name is {} and I am {} years old.".format(name, age))  
+# Output: Hello, my name is Alice and I am 25 years old.</code></pre>
+
+        <h2 class="mainh2">3. Old-Style % Formatting</h2>
+        <p class="infop">
+            The % operator was used to format strings in older Python versions. Though less popular today, it’s still used in some legacy code.
+        </p>
+        <pre><code>name = "Alice"
+age = 25
+print("Hello, my name is %s and I am %d years old." % (name, age))  
+# Output: Hello, my name is Alice and I am 25 years old.</code></pre>
+
+        <h2 class="mainh2">Using Expressions in F-Strings</h2>
+        <p class="infop">F-strings can handle expressions, making them more versatile. You can even use calculations or method calls within curly braces.</p>
+        <pre><code>num1 = 10
+num2 = 20
+print(f"The sum of {num1} and {num2} is {num1 + num2}.")  
+# Output: The sum of 10 and 20 is 30.</code></pre>
+
+        <h2 class="mainh2">Formatting Numbers</h2>
+        <p class="infop">F-strings allow you to format numbers with options like decimals, alignment, and percentage formatting.</p>
+        <pre><code>price = 49.99
+print(f"Price: ${price:.2f}")  # Display 2 decimal places
+# Output: Price: $49.99
+
+score = 0.87
+print(f"Score: {score:.1%}")  # Display as percentage
+# Output: Score: 87.0%</code></pre>
+
+        <h2 class="mainh2">Multi-Line F-Strings</h2>
+        <p class="infop">Use multi-line f-strings to format longer text or strings across multiple lines.</p>
+        <pre><code>name = "Alice"
+age = 25
+bio = f"""
+Name: {name}
+Age: {age}
+Welcome to LearnPythonForFree!
+"""
+print(bio)
+
+'''
+Output: Name: Alice
+        Age: 25
+        Welcome to LearnPythonForFree!
+'''</code></pre>
+
+        <h2 class="mainh2">Summary</h2>
+        <ul class="infoul">
+            <li>F-strings (e.g., <code>f"Hello, {name}!"</code>) are the recommended way to format strings in Python.</li>
+            <li><b>.format()</b> method is still used in many projects for backward compatibility.</li>
+            <li>Old-style formatting with <code>%</code> is useful in legacy code but generally avoided in new code.</li>
+        </ul>
+
+        <h2 class="mainh2">Example: Putting It All Together</h2>
+        <pre><code>name = "Alice"
+age = 25
+city = "New York"
+print(f"{name}, {age}, lives in {city}.")  # Using f-string
+print("{}. {} lives in {}.".format(name, age, city))  # Using format method
+print("%s, %d, lives in %s." % (name, age, city))  # Using % formatting</code></pre>
+
+        <h2 class="mainh2">Check out <a href="try-except.html" class="next">Try-Except</a></h2>
+    </main>
+
+    <footer class="footer">
+        <a href="https://www.instagram.com/learnpythonforfree/"><img src="/Images/insta.png" alt="Instagram" width="50px" class="social-icon"></a>
+        <a href="https://www.tiktok.com/@learnpythonforfre.e"><img src="/Images/TikTok.png" alt="TikTok" width="45px" class="social-icon"></a>
+        <a href="https://github.com/learnpythonfree/files.py"><img src="/Images/github.png" alt="GitHub" width="50px" class="social-icon"></a>
+        <p id="copyrightt">&copy; <span id="year"></span> LearnPythonForFree. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

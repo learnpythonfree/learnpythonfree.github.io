@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If-Else Statements | LearnPythonForFree</title>
+    <meta name="description" content="Learn about Python if-else statements with explanations and examples.">
+    <meta name="keywords" content="python, if, else, elif, beginners, LearnPythonForFree">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/Images/favicon-48x48.png" sizes="48x48" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="LearnPython" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <h2 class="subtitle">Learn Python For Free</h2>
+        <nav class="nav">
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <div class="drp">
+                <button class="language-button" id="languageButton" onclick="toggleDropdown()">☰</button>
+                <div class="dropdown" id="dropdown">
+                    <a href="hello_world.html" class="dropdown-link">Hello World</a>
+                <a href="variables.html" class="dropdown-link">Variables</a>
+                <a href="comments.html" class="dropdown-link">Comments</a>
+                <a href="print_statements.html" class="dropdown-link">Print Statements</a>
+                <a href="list.html" class="dropdown-link">Lists</a>
+                <a href="tuples.html" class="dropdown-link">Tuples</a>
+                <a href="input.html" class="dropdown-link">Input</a>
+                <a href="operators.html" class="dropdown-link">Operators</a>
+                <a href="/" class="dropdown-link">🏠︎</a>
+                <a href="loops.html" class="dropdown-link">Loops</a>
+                <a href="functions.html" class="dropdown-link">Functions</a>
+                <a href="format-string.html" class="dropdown-link">Format-Strings</a>
+                <a href="try-except.html" class="dropdown-link">Try-Except</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="mainh1">IF-ELSE STATEMENTS</h1>
+        <p class="infop">
+            Conditional statements like <b>if</b>, <b>else</b>, and <b>elif</b> allow you to control the flow of your code based on certain conditions. They enable you to create decision-making structures in your programs.
+        </p>
+
+        <h2 class="mainh2">Basic Structure of an <code>if</code> Statement</h2>
+        <p class="infop">
+            The <code>if</code> statement checks a condition and executes a block of code only if the condition is <b>True</b>. The general syntax for an <code>if</code> statement is:
+        </p>
+        <pre><code>if condition:
+    # code to execute if condition is True</code></pre>
+        <p>Example:</p>
+        <pre><code>age = 18
+if age >= 18:
+    print("You are eligible to vote!")  # Output -> You are eligible to vote!</code></pre>
+
+        <h2 class="mainh2">Adding an <code>else</code> Statement</h2>
+        <p class="infop">
+            The <code>else</code> statement provides an alternative code block that runs when the <code>if</code> condition is <b>False</b>. The syntax is:
+        </p>
+        <pre><code>if condition:
+    # code to execute if condition is True
+else:
+    # code to execute if condition is False</code></pre>
+        <p>Example:</p>
+        <pre><code>age = 16
+if age >= 18:
+    print("You are eligible to vote!")
+else:
+    print("You are not eligible to vote.")  # Output -> You are not eligible to vote.</code></pre>
+
+        <h2 class="mainh2">Using <code>elif</code> (else-if)</h2>
+        <p class="infop">
+            <code>elif</code> allows you to check multiple conditions. If the first <code>if</code> condition is <b>False</b>, <code>elif</code> checks another condition, and so on. You can have as many <code>elif</code> statements as needed.
+        </p>
+        <pre><code>if condition1:
+    # code to execute if condition1 is True
+elif condition2:
+    # code to execute if condition2 is True
+else:
+    # code to execute if all above conditions are False</code></pre>
+        <p>Example:</p>
+        <pre><code>score = 85
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:
+    print("Grade: B")  # Output -> Grade: B
+elif score >= 70:
+    print("Grade: C")
+else:
+    print("Grade: F")</code></pre>
+
+        <h2 class="mainh2">Nested <code>if</code> Statements</h2>
+        <p class="infop">
+            You can place an <code>if</code> statement inside another <code>if</code> statement. This is known as "nesting" and is useful when you need to check additional conditions within a condition.
+        </p>
+        <pre><code>if condition1:
+    if condition2:
+        # code to execute if both conditions are True
+    else:
+        # code to execute if condition1 is True and condition2 is False
+else:
+    # code to execute if condition1 is False</code></pre>
+        <p>Example:</p>
+        <pre><code>age = 20
+citizenship = "yes"
+if age >= 18:
+    if citizenship == "yes":
+        print("Eligible to vote")  # Output -> Eligible to vote
+    else:
+        print("Not eligible to vote (citizenship required)")
+else:
+    print("Not eligible to vote (age requirement not met)")</code></pre>
+
+        <h2 class="mainh2">Logical Operators with <code>if</code> Statements</h2>
+        <p class="infop">
+            You can combine multiple conditions in an <code>if</code> statement using logical operators like <code>and</code>, <code>or</code>, and <code>not</code>. This allows for more complex decision-making.
+        </p>
+        <pre><code>if condition1 and condition2:
+    # code to execute if both conditions are True
+
+if condition1 or condition2:
+    # code to execute if at least one condition is True
+
+if not condition:
+    # code to execute if condition is False</code></pre>
+        <p>Example:</p>
+        <pre><code>temperature = 25
+humidity = 80
+if temperature > 20 and humidity > 70:
+    print("It's a warm and humid day")  # Output -> It's a warm and humid day
+
+if temperature > 30 or humidity > 70:
+    print("Stay hydrated!")  # Output -> Stay hydrated!</code></pre>
+
+        <h2 class="mainh2">Summary</h2>
+        <ul class="infoul">
+            <li><b>if</b> - Checks a condition and executes code if the condition is True.</li>
+            <li><b>else</b> - Provides an alternative code block if the <code>if</code> condition is False.</li>
+            <li><b>elif</b> - Allows for additional conditions if the <code>if</code> condition is False.</li>
+            <li><b>Nested if</b> - <code>if</code> statements within other <code>if</code> statements for more complex checks.</li>
+            <li><b>Logical Operators</b> - Used to combine multiple conditions with <code>and</code>, <code>or</code>, and <code>not</code>.</li>
+        </ul>
+
+        <h2 class="mainh2">Example: Combining It All Together</h2>
+        <pre><code># Checking grade and other conditions
+grade = 88
+passed = True
+
+if grade >= 90:
+    print("Excellent performance!")
+elif grade >= 80 and passed:
+    print("Good job, you passed!")  # Output -> Good job, you passed!
+else:
+    print("Try harder next time!")</code></pre>
+
+        <h2 class="mainh2">Check out <a href="loops.html" class="next">Loops</a></h2>
+    </main>
+
+    <footer class="footer">
+        <a href="https://www.instagram.com/learnpythonforfree/"><img src="/Images/insta.png" alt="Instagram" width="50px" class="social-icon"></a>
+        <a href="https://www.tiktok.com/@learnpythonforfre.e"><img src="/Images/TikTok.png" alt="TikTok" width="45px" class="social-icon"></a>
+        <a href="https://github.com/learnpythonfree/files.py"><img src="/Images/github.png" alt="GitHub" width="50px" class="social-icon"></a>
+        <p id="copyrightt">&copy; <span id="year"></span> LearnPythonForFree. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

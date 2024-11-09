@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List | Learn Python For Free</title>
+    <meta name="description" content="Welcome to LearnPythonForFree, where you learn python for free.">
+    <meta name="keywords" content="python, learnpythonforfree, learnpython, free, for free">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/Images/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/Images/favicon.svg" />
+    <link rel="shortcut icon" href="/Images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="LearnPython" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>LearnPython</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <h2 class="subtitle">Learn Python For Free</h2>
+        <nav class="nav">
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+           <div class="drp"><button class="language-button" id="languageButton" onclick="toggleDropdown()">☰</button>
+            <div class="dropdown" id="dropdown">
+                <a href="hello_world.html" class="dropdown-link">Hello World</a>
+                <a href="variables.html" class="dropdown-link">Variables</a>
+                <a href="comments.html" class="dropdown-link">Comments</a>
+                <a href="print_statements.html" class="dropdown-link">Print Statements</a>
+                <a href="/" class="dropdown-link">🏠︎</a>
+                <a href="tuples.html" class="dropdown-link">Tuples</a>
+                <a href="input.html" class="dropdown-link">Input</a>
+                <a href="operators.html" class="dropdown-link">Operators</a>
+                <a href="if-else.html" class="dropdown-link">If-Else</a>
+                <a href="loops.html" class="dropdown-link">Loops</a>
+                <a href="functions.html" class="dropdown-link">Functions</a>
+                <a href="format-string.html" class="dropdown-link">Format-Strings</a>
+                <a href="try-except.html" class="dropdown-link">Try-Except</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <h1 class="mainh1">LISTS</h1>
+    <p class="infop">
+        A <b>List()</b> is a built-in data structure that is used to store an ordered collection of items. Lists are one of the most versatile and commonly used data types in Python because they allow you to work with a collection of values in a single variable.
+    </p>
+    <h2 class="mainh2">Key Features of Lists</h2>
+    <p class="infop">
+        <ul>
+            <li class="infoul">Ordered: Lists maintain the order of elements. If you add items in a certain order, they will stay in that order.</li>
+            <li class="infoul">Mutable: Lists can be changed after they're created. You can add, remove, or modify elements in a list.
+            </li>
+            <li class="infoul">Indexed: Each element in a list has an index, allowing you to access individual items.</li>
+            <li class="infoul">Allow Duplicates: Lists can contain duplicate elements.</li>
+            <li class="infoul">Dynamic Size: Lists can grow and shrink as you add or remove elements.</li>
+        </ul>
+        
+    </p>
+    <h2 class="mainh2">Creating a List</h2>
+    <p class="infop">You can create a list by enclosing elements in square brackets [ ], separated by commas.</p>
+    <pre ><code># An empty list
+my_list = []
+
+# A list with elements
+fruits = ["apple", "banana", "cherry"]</code></pre>
+        
+        <h2 class="mainh2">Accessing Elements in a List</h2>
+        <p class="infop">Lists use zero-based indexing, meaning the first item has an index of 0.</p>
+        
+        <pre ><code># Accessing the first element
+print(fruits[0])  # Output: apple
+
+# Accessing the last element
+print(fruits[-1])  # Output: cherry</code></pre>
+
+        <h2 class="mainh2">Modifying Lists</h2>
+        <p class="infop">Since lists are mutable, you can change the elements within them.</p>
+        <h3>Changing Elements</h3>
+        <p class="infop">You can modify an element by referring to its index.</p>
+        <pre><code>fruits[1] = "blueberry"
+print(fruits)  # Output: ["apple", "blueberry", "cherry"]</code></pre>
+        <h3>Adding Elements</h3>
+        <ol>
+            <li>append() - Adds an element to the end of the list.</li>
+            <li>insert() - Adds an element at a specified position.</li>
+        </ol>
+        <pre><code># Adding an item to the end
+fruits.append("orange")
+print(fruits)  # Output: ["apple", "blueberry", "cherry", "orange"]
+
+# Inserting an item at index 1
+fruits.insert(1, "banana")
+print(fruits)  # Output: ["apple", "banana", "blueberry", "cherry", "orange"]</code></pre>
+
+        <h3>Removing Elements</h3>
+            <ol>
+                <li>remove() - Removes the first occurrence of a specific element.</li>
+                <li>pop() - Removes an element by its index and returns it. If no index is provided, it removes the last item.</li>
+                <li>clear() - Removes all elements, making the list empty..</li>
+            </ol>
+<pre><code># Removing a specific element
+fruits.remove("banana")
+print(fruits)  # Output: ["apple", "blueberry", "cherry", "orange"]
+
+# Removing the last item
+last_item = fruits.pop()
+print(last_item)  # Output: orange
+print(fruits)     # Output: ["apple", "blueberry", "cherry"]
+
+# Removing an item by index
+fruits.pop(1)
+print(fruits)  # Output: ["apple", "cherry"]
+
+# Clearing all items
+fruits.clear()
+print(fruits)  # Output: []</code></pre>
+
+            <h2 class="mainh2">Common List Operations</h2>
+            <h3>Length of a list</h3>
+            <p class="infop">Use len() to get the number of elements in a list.</p>
+<pre><code>fruits = ["apple", "banana", "cherry"]
+print(len(fruits))  # Output: 3</code></pre>
+            <h3>Checking if an Element is in the List            </h3>
+            <p class="infop">Use the in keyword.            </p>
+            <pre><code>if "apple" in fruits:
+print("Apple is in the list!")</code></pre>
+            <h3>Slicing Lists</h3>
+            <p class="infop">Slicing allows you to get a subset of the list.</p>
+            <pre><code>numbers = [1, 2, 3, 4, 5]
+print(numbers[1:4])  # Output: [2, 3, 4]
+print(numbers[:3])   # Output: [1, 2, 3]
+print(numbers[2:])   # Output: [3, 4, 5]</code></pre>
+            <h3>Sorting a List</h3>
+            <p class="infop">You can sort a list in ascending or descending order.</p>
+            <pre><code>numbers = [5, 2, 9, 1, 5, 6]
+numbers.sort()
+print(numbers)  # Output: [1, 2, 5, 5, 6, 9]
+
+numbers.sort(reverse=True)
+print(numbers)  # Output: [9, 6, 5, 5, 2, 1]</code></pre>
+            <h3>List Comprehension</h3>
+            <p class="infop">List comprehension is a concise way to create lists.</p>
+            <pre><code># Create a list of squares
+squares = [x**2 for x in range(1, 6)]
+print(squares)  # Output: [1, 4, 9, 16, 25]
+</code></pre>
+
+<h2 class="mainh2">List Methods Summary</h2>
+<p class="infop">
+    <b><i>append()</i></b>: Adds an element to the end of the list <br>
+    <b><i>insert()</i></b>:	Adds an element at a specific index <br>
+    <b><i>remove()</i></b>:	Removes the first occurrence of a specific element <br>
+    <b><i>pop()</i></b>:	Removes an element by index and returns it <br>
+    <b><i>clear()</i></b>:	Removes all elements from the list <br>
+    <b><i>index()</i></b>:	Returns the index of the first occurrence of an element <br>
+    <b><i>count()</i></b>:	Counts occurrences of a specific element <br>
+    <b><i>sort()</i></b>:	Sorts the list in ascending or descending order <br>
+    <b><i>reverse()</i></b>:	Reverses the order of the list <br>
+    <b><i>copy()</i></b>:	Returns a shallow copy of the list</p>
+<h2 class="mainh2">Example: Summary</h2>
+<pre><code># Start with a list of numbers
+numbers = [1, 2, 3, 4, 5]
+
+# Append a new number to the end
+numbers.append(6)
+print(numbers)  # Output: [1, 2, 3, 4, 5, 6]
+
+# Insert a number at the second position
+numbers.insert(1, 9)
+print(numbers)  # Output: [1, 9, 2, 3, 4, 5, 6]
+
+# removes last item
+numbers.pop()
+print(numbers) # Output: [1, 9, 2, 3, 4, 5]
+
+# Remove the number 4 from the list
+numbers.remove(4)
+print(numbers)  # Output: [1, 9, 2, 3, 5]
+
+# Sort the list
+numbers.sort()
+print(numbers)  # Output: [1, 2, 3, 5, 9]
+
+# Slice the list to get the first three items
+first_three = numbers[:3]
+print(first_three)  # Output: [1, 2, 3]
+
+# Delete all items in list
+list.clear() # Output: []
+
+'''
+ADVANCE LIST STUFF
+'''
+[item]*int
+# example
+print[5]*7 -> # Output: [5, 5, 5, 5, 5, 5, 5]
+
+# reverse the List: example [1, 2, 3, 4, 5]
+numbers.reverse() # Output: [5, 4, 3, 2, 1]
+numbers[::-1] # Output: [5, 4, 3, 2, 1] -> also reverse the list
+
+# sort list to another list 
+nums = [1, 6, 5, 2, 9]
+numbers = sorted(nums)
+print(numbers) # Output: [1, 2, 5, 6, 9]
+
+# add items of both list to another list
+all_nums = num + numbers
+print(all_nums) # Output: [1, 6, 5, 2, 9, 1, 2, 5, 6, 9]
+</code></pre>
+
+<h2 class="mainh2">SUMMARY</h2>
+<ul class="infoul">
+    <li>Lists are ordered, mutable, and indexed collections.</li>
+    <li>They allow for flexible manipulation of data (adding, removing, sorting, etc.).</li>
+    <li>They are easy to work with and a fundamental part of Python programming, especially for beginners.</li>
+</ul>
+
+<h2 class="mainh2">Check out <a href="tuples.html" class="next">Tuples</a></h2>
+</main>
+
+    <footer class="footer">
+        <a href="https://www.instagram.com/learnpythonforfree/"><img src="/Images/insta.png" alt="Instagram" width="50px" class="social-icon"></a>
+        <a href="https://www.tiktok.com/@learnpythonforfre.e"><img src="/Images/TikTok.png" alt="TikTok" width="45px" class="social-icon"></a>
+        <a href="https://github.com/learnpythonfree/files.py"><img src="/Images/github.png" alt="GitHub" width="50px" class="social-icon"></a>
+        <p id="copyrightt">&copy; <span id="year"></span> LearnPythonForFree. All rights reserved.</p>
+
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- hljs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

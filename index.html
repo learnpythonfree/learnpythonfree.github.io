@@ -1,520 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <!--   ads   -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5073351833101318"
-    crossorigin="anonymous"></script>
-    <!-- Google tag (gtag.js) "analytics" -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KR1SYPGYY1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KR1SYPGYY1');
-</script>
+         <!--   ads   -->
+         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5073351833101318"
+         crossorigin="anonymous"></script>
+         <!-- Google tag (gtag.js) "analytics" -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KR1SYPGYY1"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+     
+       gtag('config', 'G-KR1SYPGYY1');
+     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnPythonForFree</title>
+    <title>Home | LearnPythonForFree</title>
     <meta name="description" content="Welcome to LearnPythonForFree, where you learn python for free.">
     <meta name="keywords" content="python, learnpythonforfree, learnpython, free, for free">
-    <!-- Include Tailwind CSS via CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=DynaPuff:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <!-- favicon -->
     
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- favicon -->
     <link rel="icon" type="image/png" href="Images/favicon-48x48.png" sizes="48x48" />
     <link rel="icon" type="image/svg+xml" href="Images/favicon.svg" />
     <link rel="shortcut icon" href="Images/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="LearnPython" />
     <link rel="manifest" href="site.webmanifest" />
-    <title>LearnPython</title>
-    
-<style>
-        html{
-            scroll-behavior: smooth;
-        }
-        .font-dynapuff {
-            font-family: 'DynaPuff', cursive;
-        }
-        /* Additional style to ensure single-line display */
-        pre {
-            white-space: nowrap; /* Prevent line breaks */
-        }
 
-        h1, h2, h3, h4, h5, h6, p {
-            font-family: 'Roboto', sans-serif; /* Replace 'Roboto' with your chosen font */
-            line-height: 1.5; /* Optional: improves readability */
-            margin: 0; /* Optional: resets margin for consistent spacing */
-        }
-</style>
 </head>
 
-
-<body class="bg-gray-100 flex flex-col min-h-screen scroll-smooth" id="top">
-    <header class="bg-gray-800 text-white p-5 text-center">
-        <h1 class="text-3xl font-semibold">Welcome to</h1> 
-        <h2 class="font-light font-dynapuff text-yellow-200 mt-3 text-4xl">Learn Python For Free </h2> 
-        <nav class="mt-4">
-            <a href="about.html" class="mx-3 hover:text-gray-300">About Me</a>
-            <a href="contact.html" class="mx-3 hover:text-gray-300">Contact</a>
-             <button class="text-white font-semibold focus:outline-none mx-3" id="languageButton">
-                ☰
-            </button>
-            <div class="absolute left-1/2 transform -translate-x-1/9 mt-2 w-40 bg-gray-800 bg-opacity-95 backdrop-blur rounded shadow-lg hidden" id="dropdown">
-                <a href="#hello"       class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">Hello World</a>
-                <a href="#var"         class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">Variables</a>
-                <a href="#comments"    class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">Comments</a>
-                <a href="#print"       class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">Print Statements</a>
-                <a href="#lists"       class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">Lists</a>
-                <a href="#tuples"      class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">Tuples</a>
-                <a href="#input"       class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">Input</a>
-                <a href="#operators"   class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">Operators</a>
-                <a href="#if-else"     class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">If-Else</a>
-                <a href="#loops"       class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">Loops</a>
-                <a href="#functions"   class="dropdown-link block px-4 py-0.5 text-white hover:bg-gray-500">Functions</a>
+<body>
+    <header class="header">
+        <h2 class="subtitle">Learn Python For Free</h2>
+        <nav class="nav">
+            <a href="about.html" class="nav-link">About Me</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+           <div class="drp"><button class="language-button" id="languageButton" onclick="toggleDropdown()">☰</button>
+            <div class="dropdown" id="dropdown">
+                <a href="hello_world.html" class="dropdown-link">Hello World</a>
+                <a href="variables.html" class="dropdown-link">Variables</a>
+                <a href="comments.html" class="dropdown-link">Comments</a>
+                <a href="print_statements.html" class="dropdown-link">Print Statements</a>
+                <a href="list.html" class="dropdown-link">Lists</a>
+                <a href="tuples.html" class="dropdown-link">Tuples</a>
+                <a href="input.html" class="dropdown-link">Input</a>
+                <a href="operators.html" class="dropdown-link">Operators</a>
+                <a href="if-else.html" class="dropdown-link">If-Else</a>
+                <a href="loops.html" class="dropdown-link">Loops</a>
+                <a href="functions.html" class="dropdown-link">Functions</a>
+                <a href="format-string.html" class="dropdown-link">Format-Strings</a>
+                <a href="try-except.html" class="dropdown-link">Try-Except</a>
+            </div>
             </div>
         </nav>
     </header>
-    <main class="container mx-auto mt-5 flex-grow" id="hello">
-<!--------------------------------------------------------------------------------------------------------------------------------------------->
-        <h1 class="text-5xl ml-5"><B>HELLO WORLD</B><span><a href="#top" class="text-2xl"> ⇧</a></span></h1> 
-        <p class="mt-5 text-2xl ml-5 mr-5">The <b>"Hello, World!"</b> program is considered the simplest program to test that a language's compiler or interpreter is installed correctly and that the basic code syntax is understood. It provides a gentle introduction without any complex logic or instructions.</p>
-        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg ml-5 mr-5 m-2">
-            <code>
-                <span class="text-blue-300">print</span>(<span class="text-green-400">"Hello, World!"</span>) <br> #result -> Hello, World!
-            </code>
-        </pre>
-        
-        <hr style="border: 1px solid #000000; width: 100%; margin: 40px auto;" id="var">
-<!--------------------------------------------------------------------------------------------------------------------------------------------->
-        <h1 class="text-5xl ml-5 mt-8 "><B>VARIABLES</B><span><a href="#top" class="text-2xl"> ⇧</a></span></h1>
 
-        <p class="mt-5 text-2xl ml-5 mr-2">A  <b>variable </b> is like a container in programming that holds a value. You can think of it as a box where you can store information that you want to use later in your code. </p>
-
-        <h2 class="text-4xl ml-5 mt-4 ">Why Use Variables?</h2> <br>
-        <p class="text-2xl ml-5 mr-2">Variables are important because they allow you to: Store data that can change while your program is running (like a score in a game). Make your code easier to read and manage. Avoid repeating the same value multiple times in your code.<br> Naming Variables: You can name a variable almost anything you want, but there are some rules: It must start with a letter (a-z, A-Z) or an underscore (_). It can contain letters, numbers (0-9), and underscores, but no spaces. It cannot start with a number. Variable names are case-sensitive (e.g., myVariable and myvariable are different) <br> <br> You assign a value to a variable using the = sign. For example:. </p> </p>
-
-        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg ml-5 mr-5   m-2">
-            <code>
-                <span class="text-red-300">name</span> <span>=</span>
-                 <span class="text-green-400">"LearnPythonForFree"</span> <br>
-                <span class="text-blue-300">print</span>(<span class="text-yellow-400">name</span>)
-                 <br>
-                #result -> LearnPythonForFree
-            </code>
-        </pre>
-
-        <p class=" text-2xl ml-5 mr-2"><B> NOTE!</B>  DON'T USE DOUBLE QUOTES OR SINGLE QUOTES WHILE WRITING PRINT(VARIABLE) AROUND VARIABLE </p>
-
-        <hr style="border: 1px solid #000000; width: 100%; margin: 40px auto;" id="comments">
-<!--------------------------------------------------------------------------------------------------------------------------------------------->
-        <h1 class="text-5xl ml-5 mt-8 ">
-        <B>COMMENTS</B><span><a href="#top" class="text-2xl"> ⇧</a></span>
-        </h1>
-
-        <p class="mt-5 text-2xl ml-5 mr-2"> <b>Comments</b> are notes in your code that are ignored by the Python interpreter when the code runs. They are used to explain what your code does, making it easier for you and others to understand. </p>
-        <h2 class="text-4xl ml-5 mt-4 ">Why Use Comments?</h2> 
-        <br>
-        <p class="text-2xl ml-5 mr-2"> Clarification: They help explain complex parts of the code. <br>  Documentation: They provide context for your code, which is useful when you or someone   else comes back to it later. <br> Debugging: You can comment out lines of code to prevent them from running, which can be helpful for testing. <br> There are two types of comment
-
-            <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg ml-5 mr-5   m-2">
-                <code>
-                    # I am a single line comment <br>
-                    # Everything after '#' <br> # in line is comment <br> <br>
-
-                    ''' <br>
-                    I Am A Multi Line <br>
-                    Comment <br>
-                    I must be inside <br> """ """ or ''' ''' <br>
-                    '''
-                </code>
-            </pre>
-        </p>
-
-        <hr style="border: 1px solid #000000; width: 100%; margin: 40px auto;" id="print">
-<!--------------------------------------------------------------------------------------------------------------------------------------------->
-        <h1 class="text-5xl mt-8 ml-5"><B>PRINT STATEMENTS</B><span><a href="#top" class="text-2xl"> ⇧</a></span></h1>
-
-        <p class="mt-5 text-2xl ml-5 mr-5"> In programming, <b>print statements</b> are used to display output to the user. They are one of the simplest and most common tools used to debug code, display messages, or show the result of some calculations. </p>
-
-        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg  ml-5 mr-5  m-2">
-            <code>
-                <span class="text-blue-300">
-                    print</span>(<span class="text-green-400">"Hello, World!"</span>)<br>
-                #output -> Hello, World!
-            </code>
-        </pre>
-
-        <hr style="border: 1px solid #000000; width: 100%; margin: 40px auto;" id="lists">
-<!--------------------------------------------------------------------------------------------------------------------------------------------->
-        <h1 class="text-5xl mt-8 ml-5">
-            <b>LISTS</B><span><a href="#top" class="text-2xl"> ⇧</a></span>
-        </h1>
-
-        <p class="mt-5 text-2xl ml-5 mr-5"> A list is a way to store a bunch of values together in one place so you can access, change, and work with them easily. Imagine a list like a container that holds multiple items in a specific order. You can put anything in a list: numbers, words, or even other lists! </p>
-        <h2 class="text-4xl ml-5 mt-4 "> Basic List Concept </h2> 
-        <br>
-        <p class=" text-2xl ml-5 mr-5">In Python, a list is written with square brackets [ ], and items are separated by commas. Here's a simple example of a list: </p>
-
-        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg  ml-5 mr-5 text-sm m-2">
-            <code>
-                <span class="text-red-300">fruits</span> <span>=</span>
-                [<span class="text-green-400">"apple", "banana", "mango"</span>] 
-            </code>
-        </pre>
-
-        <p class="mt-5 text-2xl ml-5 mr-5">
-            Here, fruits is a list with three items: "apple", "banana", and "mango".
-        </p>
-
-        <h2 class="text-4xl ml-5 mt-4 "> Key Points about Lists </h2>
-
-        <p class="mt-5 text-2xl ml-5 mr-5">Ordered: The order of items in a list matters. The first item is at position 0, the second is at position 1, and so on. <br> Changeable: You can add, remove, or change items in a list after creating it. <br> Allows Duplicates: Lists can have the same item more than once. <br> <br> You can get an item by its position (or "index"):
-        </p>
-
-            <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg ml-5 mr-5  text-sm m-2">
-                <code>
-                    <span class="text-blue-300">print</span>(<span class="text-yellow-400">fruits[0]</span>) # Output -> apple <br>
-                    <span class="text-blue-300">print</span>(<span class="text-yellow-400">fruits[1]</span>) # Output -> banana
-                </code>
-            </pre>   
-
-        <p class="mt-5 text-2xl ml-5 mr-5">
-            You can add an item to the end of a list with <i> <b> .append(): </b> </i>
-            <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg   ml-5 mr-5    text-sm m-2">
-                <code>
-                    <span class="text-blue-300">fruit.append</span>(<span class="text-green-400">"orange"</span>) <br># Now fruits is <br> ["apple", "banana", "cherry", "orange"]
-                </code>
-            </pre>   
-        </p>
-
-        <p class="mt-5 text-2xl ml-5 mr-5">
-            You can remove an item by its value with <i> <b> .remove(): </b> </i>
-            <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg   ml-5 mr-5   m-2">
-                <code>
-                    <span class="text-blue-300">fruit.remove</span>(<span class="text-green-400">"banana"</span>) <br> # Now fruits is <br> ["apple", "cherry", "orange"]
-                </code>
-            </pre>   
-        </p> 
-
-<!--------------------------------------------------------------------------------------------------------------------------------------------->
-
-        <hr style="border: 1px solid #000000; width: 100%; margin: 40px auto;" id="tuples">
-
-        <h1 class="text-5xl mt-8 ml-5">
-           <B>TUPLES</B><span><a href="#top" class="text-2xl"> ⇧</a></span>
-        </h1>
-
-        <p class="mt-5 text-2xl ml-5 mr-5"> A tuple is a collection of items, similar to a list, but ordered and immutable (meaning it can't be changed after creation). </p>
-        <h2 class="text-4xl ml-5 mt-4 "> Basic Tuples Concept </h2> 
-        <br>
-        <p class=" text-2xl ml-5 mr-5">You create a tuple by placing items inside parentheses () separated by commas, like this: </p>
-
-        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg text-sm ml-5 mr-5  m-2">
-            <code>
-                <span class="text-red-300">my_tuple</span><span>=</span>(<span class="text-green-400">1, 2, 3, "apple", "banana"</span>) 
-            </code>
-        </pre>
-
-        <p class="mt-5 text-2xl ml-5 mr-5">
-            Each item in a tuple can be of any data type (integers, strings, lists, other tuples, etc.).
-        </p>
-
-        <h2 class="text-4xl ml-5 mt-4 "> Key Points about Tuples </h2>
-
-        <p class="mt-5 text-2xl ml-5 mr-5">Ordered: The order of items in a tuple matters. The first item is at position 0, the second is at position 1, and so on. <br> Immutable(means unchangeble): You cannot add, remove, or change items in a tuple after creating it. <br> Allows Duplicates: Tuples can have the same item more than once. <br> <br> You can get an item by its position (or "index") like LISTS:
-        </p>
-
-            <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg  ml-5 mr-5  m-2">
-                <code>
-                    <span class="text-blue-300">print</span>(<span class="text-yellow-400">fruits[0]</span>) <br> # Output -> apple <br>
-                    <span class="text-blue-300">print</span>(<span class="text-yellow-400">fruits[1]</span>) <br> # Output -> banana
-                </code>
-            </pre>   
-
-        <p class="mt-5 text-2xl ml-5 mr-5">
-            You cannot add an item to the tuple
-            <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg  ml-5 mr-5  text-sm m-2">
-                <code>
-                    <span class="text-blue-300">my_tuple.append</span>(<span class="text-green-400">"orange"</span>) <br># This will raise an error
-                </code>
-            </pre>   
-        </p>
-
-        <p class="mt-5 text-2xl ml-5 mr-5">
-            You cannot remove any item in tuple
-            <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg ml-5 mr-5   m-2">
-                <code>
-                    <span class="text-blue-300">my_tuple.remove</span>(<span class="text-green-400">"banana"</span>) <br> # This will raise an error
-                </code>
-            </pre>   
-        </p> 
-        <h2 class="text-4xl ml-5 mt-4 ">When to Use a Tuple</h2>
-        <p class="mt-5 text-2xl ml-5 mr-5">
-            You want to store a fixed collection of items that shouldn't change.
-            You need data integrity, ensuring that values won't accidentally change.
-            You want a lightweight, faster alternative to lists for read-only data.
-        </p>
-
-        <h2 class="text-4xl ml-5 mt-4 ">Packing and Unpacking Tuples </h2>
-
-        <p class="mt-5 text-2xl ml-5 mr-5"><b> Packing</b> a tuple: Storing multiple values in a single tuple.</p>
-
-        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg  ml-5 mr-5  m-2">
-            <code>
-                <span class="text-red-300">my_tuple</span> <span>=</span>
-                <span class="text-green-400">1, 2, "apple"</span> <br>
-                """ You can make tuple <br> without brackets <br>
-                and it will not <br> raise any error!"""
-            </code>
-        </pre>   
-
-        <p class="mt-5 text-2xl ml-5 mr-5"><b> Unpacking</b> a tuple: Extracting values into individual variables.</p>
-        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg  ml-5 mr-5  m-2">
-            <code>
-                <span class="text-red-300">a, b, c </span> <span>=</span>
-                <span class="text-yellow-400">my_tuple</span> <br> <span class="text-blue-300">print</span>(<span class="text-yellow-400">a</span>) # Output -> 1 <br>
-                <span class="text-blue-300">print</span>(<span class="text-yellow-400">b</span>) # Output -> 2 <br>
-                <span class="text-blue-300">print</span>(<span class="text-yellow-400">c</span>) # Output -> "apple"        
-            </code>
-        </pre>   
-<!--------------------------------------------------------------------------------------------------------------------------------------------->
-
-        <hr style="border: 1px solid #000000; width: 100%; margin: 40px auto;" id="input">
-
-        <h1 class="text-5xl mt-8 ml-5 text-orange-600">
-           <B>INPUT</B> <span><a href="#top" class="text-2xl"> ⇧</a></span>
-        </h1>
-
-        <p class="mt-5 text-2xl ml-5 mr-5"> In Python, you can get input from a user using the <b>input()</b> function. This function pauses the program and waits for the user to type something and press Enter. Let's break down the basics of <b>input()</b> and how to use it effectively: </p>
-        <h2 class="text-4xl ml-5 mt-4 "> Like this</h2> 
-        <br>
-        
-        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg  ml-5 mr-5  m-2">
-            <code>
-                <span class="text-red-300">name</span><span>=</span><span class="text-yellow-500">input</span>(<span class="text-green-400">"Enter your name: "</span>) 
-            </code>
-        </pre>
-        <p class=" text-2xl ml-5 mr-5">When input("Enter your name: ") is run, the program displays the message inside the parentheses <br> ("Enter your name: "), and waits for the user to type something.</p>
-        <p class="mt-5 text-2xl ml-5 mr-5">
-            You can take input for integers like this
-        </p>
-        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg ml-5 text-sm mr-5 m-2">
-            <code>
-                <span class="text-blue-300">age</span><span> = </span><span class="text-blue-400">int</span>(<span class="text-yellow-500">input</span>(<span class="text-green-400">"Enter your age: "</span>))
-            </code>
-        </pre>
-<!--------------------------------------------------------------------------------------------------------------------------------------------->
-        <hr style="border: 1px solid #000000; width: 100%; margin: 40px auto;" id="operators">
-
-        <h1 class="text-5xl mt-8 ml-5 mr-5">
-           <b>BASIC OPERATORS </b><span><a href="#top" class="text-2xl"> ⇧</a></span>
-        </h1>
-        <h2 class="text-4xl  mt-4 ml-5 mr-5">Comparision Operators</h2>
-        <p class="mt-5 text-2xl ml-5 mr-5">
-            Comparison operators are used to compare two values. In programming, they help to check conditions, and the result of a comparison is always either True or False. Here's a quick guide on the basic comparison operators:<br> <br>
-            == means Equal <br>
-            != means Not Equal <br>
-            > means Greater than <br>
-            < means Lesser than<br>
-            >= means Greater than or Equal <br>
-            <= means Lesser than or Equal <br>
-           
-        </p>
-        <h2 class="text-4xl ml-5 mt-4 ">  for example</h2> <br>
-        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg ml-5 mr-5 m-2">
-            <code>
-                <span class="text-blue-300">print</span>(<span class="text-green-400">5 == 8</span>) # Output -> False <br>
-                <span class="text-blue-300">print</span>(<span class="text-green-400">5 != 8</span>) # Output -> True <br>
-                <span class="text-blue-300">print</span>(<span class="text-green-400">5 > 8</span>) # Output -> False<br>
-                <span class="text-blue-300">print</span>(<span class="text-green-400">5 < 8</span>) # Output -> True<br>
-                <span class="text-blue-300">print</span>(<span class="text-green-400">5 >= 8</span>) # Output -> False<br>
-                <span class="text-blue-300">print</span>(<span class="text-green-400">5 <= 8</span>) # Output -> True<br>
-            </code>
-        </pre>
-
-        <h2 class="text-4xl  mt-4 ml-5 mr-5">Arithmetic Operators</h2>
-        <p class="mt-5 text-2xl ml-5 mr-5">
-            Arithmetic operators in Python are used to perform basic mathematical operations. Here's a quick guide to each one with examples to help you get started:<br> <br>
-            + means Addition <br>
-            - means Subtraction <br>
-            * means Multiply <br>
-            / means Division<br>
-            // means Floor Division <span class="text-lg"> (Performs division and rounds down to the nearest whole number (or integer), removing any decimal part)</span> <br>
-            ** means Exponentiation <span class="text-lg">(Raises one number to the power of another e.g., 𝑥 ** 𝑦 means 𝑥 raised to the power 𝑦)</span> <br>
-            % means Modulus <span class="text-lg">(Returns the remainder after division.)</span> <br>
-           
-        </p>
-        <h2 class="text-4xl ml-5 mt-4 ">  for example</h2> <br>
-        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg ml-5 mr-5 m-2">
-            <code>
-                <span class="text-blue-300">print</span>(<span class="text-green-400">5 + 8</span>) # Output -> 13 <br>
-                <span class="text-blue-300">print</span>(<span class="text-green-400">5 - 8</span>) # Output -> -3 <br>
-                <span class="text-blue-300">print</span>(<span class="text-green-400">5 * 8</span>) # Output -> 40 <br>
-                <span class="text-blue-300">print</span>(<span class="text-green-400">5 / 8</span>) # Output -> 0.625 <br>
-                <span class="text-blue-300">print</span>(<span class="text-green-400">5 ** 8</span>) # Output -> 390625 <br>
-                <span class="text-blue-300">print</span>(<span class="text-green-400">5 // 8</span>) # Output -> 0 <br>
-                <span class="text-blue-300">print</span>(<span class="text-green-400">5 % 8</span>) # Output -> 5 <br>
-            </code>
-        </pre>
-
-        <h2 class="text-4xl  mt-4 ml-5 mr-5">Logical Operators</h2>
-        <p class="mt-5 text-2xl ml-5 mr-5">
-            Python uses the keywords and, or, and not for logical operations:<br> <br>
-            "and" operator Returns True only if both expressions are True. <br>
-            "or" operator Returns True if at least one of the expressions is True. <br>
-            "not" operator Reverses the Boolean value of an expression. If an expression is True, "not" makes it False, and vice versa. <br>
-        </p>
-        <h2 class="text-4xl ml-5 mt-4 ">  for example</h2> <br>
-        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg ml-5 mr-5 m-2">
-            <code>
-                <span class="text-blue-300">print</span>(<span class="text-green-400">10</span> > <span class="text-green-400">5</span> <span class="text-blue-600">and</span> <span class="text-green-400">8</span> > <span class="text-green-400">3</span>) <br> # True (both conditions are true) <br>
-                <span class="text-blue-300">print</span>(<span class="text-green-400">10</span> > <span class="text-green-400">5</span> <span class="text-blue-600">or</span> <span class="text-green-400">8</span> < <span class="text-green-400">3</span>) <br> # True (one conditions are true) <br>
-                <span class="text-blue-300">print</span>(<span class="text-blue-600">not</span>(<span class="text-green-400">10</span> > <span class="text-green-400">5</span>)) <br> <span class="text-xs"> # False (not inverts the true condition) </span><br>
-            </code>
-        </pre>
-<!--------------------------------------------------------------------------------------------------------------------------------------------->
-<hr style="border: 1px solid #000000; width: 100%; margin: 40px auto;" id="if-else">
-
-<h1 class="text-5xl mt-8 ml-5 mr-5">
-   <b>If-Else Statements</b><span><a href="#top" class="text-2xl"> ⇧</a></span>
-</h1>
-<p class="mt-5 text-2xl ml-5 mr-5">
-    The <b>if</b> statement checks if a condition is true. If it is, the code inside the if block runs. <br>
-    The <b>else</b> part is optional and runs when the if condition is false. <br>
-    If you have multiple conditions, you can use <b>elif</b> to check additional conditions.
-   
-</p>
-<h2 class="text-4xl ml-5 mt-4 ">for example</h2> <br>
-<pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg ml-5 mr-5 m-2">
-    <code>
-        age = <span class="text-red-500">16</span> <br> 
-        <span class="text-blue-500">if</span> age >= <span class="text-red-500">18</span>: <br> &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue-300">print</span>(<span class="text-green-400">"You are an adult."</span>) <br> 
-        <span class="text-blue-500">elif</span> age >= <span class="text-red-500">13</span>: <br> &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue-300">print</span>(<span class="text-green-400">"You are a teenager."</span>) <br> 
-        <span class="text-blue-500">else</span>: <br> &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue-300">print</span>(<span class="text-green-400">"You are a child"</span>) 
-        <br> <br>
-        # output -> You are a teenager.
-    </code>
-</pre>
-<p class="mt-5 text-2xl ml-5 mr-5"> <B> NOTE!</B>  :- YOU MUST USE TAB(4 SPACES) BEFORE PRINT WHICH IS ALSO CALLED IDENTATION</p>
-
-<!--------------------------------------------------------------------------------------------------------------------------------------------->
-
-        <hr style="border: 1px solid #000000; width: 100%; margin: 40px auto;" id="loops">
-
-        <h1 class="text-5xl mt-8 ml-5 text-orange-600" id="input">
-           <B>LOOPS</B> <span><a href="#top" class="text-2xl"> ⇧</a></span>
-        </h1>
-        <h2 class="text-4xl  mt-4 ml-5 mr-5">For Loops</h2>
-
-        <p class="mt-5 text-2xl ml-5 mr-5"> In Python, for loops are used to repeat a block of code for each item in a sequence, like a list, string, tuple, or range of numbers. </p>
-        <h2 class="text-4xl ml-5 mt-4 ">For Example: Looping Over a List</h2> 
-        <br>
-        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg  ml-5 mr-5 m-2">
-            <code>
-                <span class="text-red-300">fruits</span> <span>=</span>
-                [<span class="text-green-400">"apple", "banana"</span>] <br>
-                <span class="text-blue-400">for</span> fruit <span class="text-blue-600">in</span> fruits: <br> <span class="text-blue-300">&nbsp;&nbsp;&nbsp;&nbsp;print</span>(<span class="text-red-300">fruit</span>) <BR> <br> """ <br> apple <br> banana <br> """
-            </code>
-        </pre>
-        <p class="mt-5 text-2xl ml-5 mr-5"> <B> NOTE!</B>  :- YOU MUST USE TAB(4 SPACES) BEFORE PRINT WHICH IS ALSO CALLED IDENTATION</p>
-        <h2 class="text-4xl ml-5 mt-4 ">Using range()</h2> 
-        <p class="mt-5 text-2xl ml-5 mr-5">If you want to loop a specific number of times, you can use range().</p>
-        <br>
-        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg  ml-5 mr-5 m-2">
-            <code>
-                <span class="text-blue-400">for</span> i <span class="text-blue-600">in</span> <span class="text-yellow-400">range</span>(<span class="text-red-600">5</span>): <br> <span class="text-blue-300">&nbsp;&nbsp;&nbsp;print</span>(<span class="text-red-300">i</span>) <BR> <br> """ <br> 1 <br> 2<br> 3 <br> 4 <br> """
-            </code>
-        </pre>
-        <h2 class="text-4xl  mt-4 ml-5 mr-5">While Loops</h2>
-
-        <p class="mt-5 text-2xl ml-5 mr-5"> A <b>while</b> loop in Python allows you to repeatedly execute a block of code as long as a specific condition is <b>True</b>. It's useful when you don't know in advance how many times you want to repeat a block of code. </p>
-        <h2 class="text-4xl ml-5 mt-4 ">For Example</h2> 
-        <br>
-        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg  ml-5 mr-5 m-2">
-            <code>
-                <span class="text-red-300">counter</span> <span>=</span><span class="text-yellow-400"> 1</span> <br>
-                <span class="text-blue-400">while</span> counter <= 5: <br> <span class="text-blue-300">&nbsp;&nbsp;&nbsp;&nbsp;print</span>(<span class="text-red-300">counter</span>) <BR>&nbsp;&nbsp;&nbsp;&nbsp;counter += 1 <br> <br> # += means counter + 1 <br>  """ <br> 1 <br> 2 <br> 3 <br> 4 <br> 5 <br> """
-            </code>
-        </pre>
-        <p class="mt-5 text-2xl ml-5 mr-5"><B> NOTE!</B> :- YOU MUST UPDATE VARIABLES CORRECTLY IF YOU DON'T IT WILL RUN <B> INFINITELY</B> AND NEVER STOPS LIKE I USED <B>COUNTER += 1</B> WHICH ALSO MEANS <BR> <B>COUNTER = COUNTER + 1</B> <BR> WHICH MEANS I AM INCRESING OR INCREMENTING THE VALUE OF COUNTER</p>
-        
-<!--------------------------------------------------------------------------------------------------------------------------------------------->
-
-        <hr style="border: 1px solid #000000; width: 100%; margin: 40px auto;" id="functions">
-
-        <h1 class="text-5xl mt-8 ml-5 text-orange-600" id="input">
-           <B>FUNCTIONS</B> <span><a href="#top" class="text-2xl"> ⇧</a></span>
-        </h1>
-        <p class="mt-5 text-2xl ml-5 mr-5"> A <b>function</b> is a reusable block of code designed to perform a specific task. You can think of it as a "mini-program" within your main program. Functions allow you to break down complex code into smaller, manageable parts and make your code cleaner and easier to understand. It is like variables which you can use repeatedly unlike variable you can do anything like assign variables, if-else, loops, etc. <br> To define a function, we use the <b>def</b> keyword, followed by the function name, parentheses <b>()</b>, and a colon <b>:</b>. After that, the indented lines contain the function's code. </p> 
-        <h2 class="text-4xl ml-5 mt-4 ">For Example</h2> 
-        <br>
-        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg  ml-5 mr-5 m-2">
-            <code>
-                <span class="text-blue-400">def</span> <span class="text-red-600"> greet</span> 
-                (): <br>
-                <span class="text-blue-300">&nbsp;&nbsp;&nbsp;&nbsp;print</span>(<span class="text-green-400">"Hello, World!"</span>) <br> <span class="text-green-500">greet()</span> <br> #result -> Hello, World!
-            </code>
-        </pre>
-        <p class="mt-5 text-2xl ml-5 mr-5"> <B> NOTE!</B>  :- YOU MUST CALL THE FUNCTION OUTSIDE THE FUNCTION OR IT WILL NOT EXECUTE</p>
-
-
+    <main>
+        <ul class="link-list">
+            <li><a href="hello_world.html"><button class="main">Hello World</button></a></li>
+            <li><a href="variables.html"><button class="main">Variables</button></a></li>
+            <li><a href="comments.html"><button class="main">Comments</button></a></li>
+            <li><a href="print_statements.html"><button class="main">Print Statements</button></a></li>
+            <li><a href="list.html"><button class="main">Lists</button></a></li>
+            <li><a href="tuples.html"><button class="main">Tuples</button></a></li>
+            <li><a href="input.html"><button class="main">Input</button></a></li>
+            <li><a href="operators.html"><button class="main">Operators</button></a></li>
+            <li><a href="if-else.html"><button class="main">If-Else</button></a></li>
+            <li><a href="loops.html"><button class="main">Loops</button></a></li>
+            <li><a href="functions.html"><button class="main">Functions</button></a></li>
+            <li><a href="format-string.html"><button class="main">Format-Strings</button></a></li>
+            <li><a href="try-except.html"><button class="main">Try-Except</button></a></li>
+        </ul>
     </main>
-<!--------------------------------------------------------------------------------------------------------------------------------------------->
-<!--------------------------------------------------------------------------------------------------------------------------------------------->
-<!--------------------------------------------------------------------------------------------------------------------------------------------->
+    
+    
 
-    <footer class="bg-gray-800 text-white flex mt-20 justify-center">
-        <a href="https://www.instagram.com/learnpythonforfree/"><img src="Images/insta.png" alt="" width="50px" class="px-1 m-3 mr-2"></a>
-        <a href="https://www.tiktok.com/@learnpythonforfre.e"><img src="Images/TikTok.png" alt="" width= "45px" class="px-1 m-3 mr-2"></a>
-        <a href="https://github.com/learnpythonfree/files.py"><img src="Images/github.png" alt="" width="50px" class="px-1 m-3 mr-2"></a>
+    <footer class="footer">
+        <a href="https://www.instagram.com/learnpythonforfree/"><img src="Images/insta.png" alt="Instagram" width="50px" class="social-icon"></a>
+        <a href="https://www.tiktok.com/@learnpythonforfre.e"><img src="Images/TikTok.png" alt="TikTok" width="45px" class="social-icon"></a>
+        <a href="https://github.com/learnpythonfree/files.py"><img src="Images/github.png" alt="GitHub" width="50px" class="social-icon"></a> 
+        <p id="copyrightt">&copy; <span id="year"></span> LearnPythonForFree. All rights reserved.</p>
+
     </footer>
 
+    <!-- JavaScript for dropdown functionality -->
+    <script src="script.js"></script>
 
-    <script>
-        // JavaScript to toggle dropdown visibility
-        const languageButton = document.getElementById('languageButton');
-        const dropdown = document.getElementById('dropdown');
-
-        languageButton.addEventListener('click', () => {
-            dropdown.classList.toggle('hidden');
-        });
-
-        // Close dropdown when clicking outside
-        window.addEventListener('click', (event) => {
-            if (!dropdown.contains(event.target) && event.target !== languageButton) {
-                dropdown.classList.add('hidden');
-            }
-        });
-
-        const dropdownLinks = dropdown.querySelectorAll('.dropdown-link');
-        dropdownLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                dropdown.classList.add('hidden'); // Hide the dropdown
-            });
-        });
-    </script>
 </body>
 </html>
-
-<!-- 
-        <h1 class="text-5xl mt-8 ml-5 mr-5">
-
-        </h1>
-        <h2 class="text-4xl ml-5 mr-5 mt-4 "></h2>
-        <p class="mt-5 text-2xl ml-5 mr-5">
-
-        </p>
-        <h2 class="text-4xl ml-5 mr-5 mt-4 "> </h2> <br>
-        <pre class="bg-gray-900 text-gray-300 p-2 rounded-lg shadow-lg ml-5 mr-5 m-2">
-            <code>
-                <span class="text-blue-300">print</span>(<span class="text-green-400">
-                    "Hello, World!"
-                </span>) <br>
-                # Output ->
-            </code>
-        </pre>
-        
--->
