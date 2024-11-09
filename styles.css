@@ -274,7 +274,20 @@ pre {
     margin-top: 2%;
     margin-bottom: 2%;
 }
-
+code{
+    font-size: large;
+}
+@media (max-width: 767px) { /* Target devices with a width of 767px or smaller */
+    .infop, ol, .infoul{
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
+    .mainh2{
+        font-size: 1.5rem;
+    }
+    pre, code{
+        font-size: 0.7rem;
+    }
+}
 #copyrightt{
     margin-top: 20px;
 }
@@ -282,9 +295,6 @@ pre {
 .next{
     text-decoration: none;
     color: rgb(144, 144, 255);
-}
-code{
-    font-size: large;
 }
 
 /* .builtFunc{
