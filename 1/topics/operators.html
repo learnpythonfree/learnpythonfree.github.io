@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators & Math - Learn Python</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles/topic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css">
+</head>
+<body>
+    
+    
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">
+                <i class="fab fa-python"></i>
+                <span>LearnPython<span class="my to">.my.to</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#topics">Topics</a></li>
+                <li><a href="../index.html#playground">Playground</a></li>
+                <li><a href="../index.html#challenges">Challenges</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main class="topic-content">
+        <article class="topic-article">
+            <nav class="topic-nav">
+                <a href="../index.html#topics" class="back-to-topics">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Topics
+                </a>
+                <div class="topic-progress">
+                    <span>Topic 3 of 16</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 18.75%"></div>
+                    </div>
+                </div>
+            </nav>
+
+            <h1>Operators & Math in Python</h1>
+            
+            <section class="topic-section">
+                <h2>Arithmetic Operators</h2>
+                <p>Python provides all the standard mathematical operators for performing calculations.</p>
+                
+                <div class="example-box">
+                    <h3>Basic Math Operations</h3>
+                    <pre><code class="python">
+# Addition
+sum = 5 + 3        # 8
+
+# Subtraction
+diff = 10 - 4      # 6
+
+# Multiplication
+product = 3 * 4    # 12
+
+# Division
+quotient = 15 / 3  # 5.0 (always returns float)
+
+# Floor Division
+floor_div = 17 // 5  # 3 (rounds down to nearest integer)
+
+# Modulus (remainder)
+remainder = 17 % 5   # 2
+
+# Exponentiation
+power = 2 ** 3      # 8 (2 raised to power 3)
+                    </code></pre>
+                </div>
+            </section>
+
+            <section class="topic-section">
+                <h2>Assignment Operators</h2>
+                <div class="example-box">
+                    <pre><code class="python">
+# Simple assignment
+x = 10
+
+# Add and assign
+x += 5      # Same as: x = x + 5
+
+# Subtract and assign
+x -= 3      # Same as: x = x - 3
+
+# Multiply and assign
+x *= 2      # Same as: x = x * 2
+
+# Divide and assign
+x /= 4      # Same as: x = x / 4
+                    </code></pre>
+                </div>
+            </section>
+
+            <section class="topic-section">
+                <h2>Comparison Operators</h2>
+                <div class="example-box">
+                    <pre><code class="python">
+# Equal to
+5 == 5    # True
+
+# Not equal to
+5 != 3    # True
+
+# Greater than
+5 > 3     # True
+
+# Less than
+3 < 5     # True
+
+# Greater than or equal to
+5 >= 5    # True
+
+# Less than or equal to
+3 <= 5    # True
+                    </code></pre>
+                </div>
+            </section>
+
+            <section class="topic-section">
+                <h2>Logical Operators</h2>
+                <div class="example-box">
+                    <pre><code class="python">
+# and operator
+True and True     # True
+True and False    # False
+
+# or operator
+True or False     # True
+False or False    # False
+
+# not operator
+not True          # False
+not False         # True
+                    </code></pre>
+                </div>
+            </section>
+        </article>
+
+        <section class="practice-section">
+            <h2>Try It Yourself</h2>
+            <p>Use the editor below to practice using Python operators:</p>
+            
+            <div class="editor-container">
+                <div class="editor-header">
+                    <div class="file-name">main.py</div>
+                    <button class="run-btn" onclick="runCode()">
+                        <i class="fas fa-play"></i> Run Code
+                    </button>
+                </div>
+                <textarea id="code-editor">
+# Try some mathematical operations
+x = 10
+y = 3
+
+# Addition
+sum = x + y
+print("Sum:", sum)
+
+# Division with remainder
+quotient = x // y
+remainder = x % y
+print("Quotient:", quotient)
+print("Remainder:", remainder)
+
+# Comparison
+print("Is x greater than y?", x > y)
+                </textarea>
+                <div class="output-container">
+                    <div class="output-header">Output</div>
+                    <div id="output"></div>
+                </div>
+            </div>
+
+            <div class="practice-exercises">
+                <h3>Practice Exercises</h3>
+                <div class="exercise-list">
+                    <div class="exercise">
+                        <h4>Exercise 1: Basic Math</h4>
+                        <p>Calculate the area and perimeter of a rectangle with length 5 and width 3.</p>
+                    </div>
+                    <div class="exercise">
+                        <h4>Exercise 2: Temperature Conversion</h4>
+                        <p>Convert a temperature from Celsius to Fahrenheit using the formula: F = (C * 9/5) + 32</p>
+                    </div>
+                    <div class="exercise">
+                        <h4>Exercise 3: Logical Operations</h4>
+                        <p>Create variables for age and height, then use comparison and logical operators to check if someone is eligible for a ride (must be over 12 years and taller than 1.4m).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <nav class="topic-navigation">
+            <a href="variables.html" class="nav-button back-button">
+                <i class="fas fa-arrow-left"></i>
+                Previous: Variables & Data Types
+            </a>
+            <a href="strings.html" class="nav-button next-button">
+                Next: Strings
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </nav>
+    </main>
+
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>LearnPython</h4>
+                <p>Your journey to mastering Python programming starts here. Clear explanations, practical examples, and interactive learning.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../index.html#topics">Topics</a></li>
+                    <li><a href="../index.html#playground">Playground</a></li>
+                    <li><a href="../index.html#challenges">Challenges</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 LearnPython. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>
+        // Initialize CodeMirror editor
+        var editor = CodeMirror.fromTextArea(document.getElementById("code-editor"), {
+            mode: "python",
+            theme: "monokai",
+            lineNumbers: true,
+            autoCloseBrackets: true,
+            matchBrackets: true,
+            indentUnit: 4,
+            tabSize: 4,
+            indentWithTabs: false,
+            lineWrapping: true
+        });
+
+        // Initialize syntax highlighting
+        hljs.highlightAll();
+
+        // Function to run the code (this is a mock implementation)
+        function runCode() {
+            const code = editor.getValue();
+            const output = document.getElementById("output");
+            
+            // In a real implementation, you would send this code to a Python backend
+            // For now, we'll just show the code in the output
+            output.innerHTML = "<pre>Running code...\n\n" + code + "</pre>";
+        }
+    </script>
+</body>
+</html>

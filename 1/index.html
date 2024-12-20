@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Python - Interactive Python Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fab fa-python"></i>
+                <span>LearnPython<span class="my to">.my.to</span></span>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#tutorials">Start Learning</a></li>
+                <li><a href="#playground">Playground</a></li>
+                <li><a href="#challenges">Challenges</a></li>
+                <li><a href="#login" class="login-btn">Login</a></li>
+                <li><a href="#signup" class="signup-btn">Start Learning</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Learn Python Programming</h1>
+            <p>Master Python programming with our interactive tutorials, hands-on exercises, and real-world projects. Perfect for beginners and intermediate developers.</p>
+            <div class="hero-buttons">
+                <a href="#topics" class="hero-button primary-button">
+                    <i class="fas fa-book"></i>
+                    Start Learning
+                </a>
+                <a href="#playground" class="hero-button secondary-button">
+                    <i class="fas fa-code"></i>
+                    Try Python
+                </a>
+            </div>
+            <div class="hero-code">
+                <pre><code><span class="comment"># Your first Python program</span>
+<span class="keyword">def</span> greet(name):
+    message = <span class="string">f"Hello, {name}!"</span>
+    <span class="keyword">return</span> message
+
+<span class="comment"># Let's run it!</span>
+result = greet(<span class="string">"World"</span>)
+print(result)  <span class="comment"># Output: Hello, World!</span></code></pre>
+            </div>
+        </section>
+
+        <section id="topics" class="topics-section">
+            <h2>Python Topics</h2>
+            <div class="topics-grid">
+                <a href="topics/hello-world.html" class="topic-card">
+                    <i class="fas fa-hand-wave"></i>
+                    <h3>Hello World</h3>
+                    <p>Start your Python journey with your first program.</p>
+                </a>
+                <a href="topics/variables.html" class="topic-card">
+                    <i class="fas fa-box"></i>
+                    <h3>Variables</h3>
+                    <p>Learn about storing and manipulating data.</p>
+                </a>
+                <a href="topics/operators.html" class="topic-card">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Operators</h3>
+                    <p>Perform calculations and comparisons.</p>
+                </a>
+                <a href="topics/strings.html" class="topic-card">
+                    <i class="fas fa-quote-right"></i>
+                    <h3>Strings</h3>
+                    <p>Work with text and string operations.</p>
+                </a>
+                <a href="topics/lists.html" class="topic-card">
+                    <i class="fas fa-list"></i>
+                    <h3>Lists</h3>
+                    <p>Store and manage sequences of data.</p>
+                </a>
+                <a href="topics/dictionaries.html" class="topic-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Dictionaries</h3>
+                    <p>Create key-value pair collections.</p>
+                </a>
+                <a href="topics/sets.html" class="topic-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Sets</h3>
+                    <p>Work with unique collections of items.</p>
+                </a>
+                <a href="topics/tuples.html" class="topic-card">
+                    <i class="fas fa-link"></i>
+                    <h3>Tuples</h3>
+                    <p>Use immutable sequences of data.</p>
+                </a>
+                <a href="topics/control-flow.html" class="topic-card">
+                    <i class="fas fa-code-branch"></i>
+                    <h3>Control Flow</h3>
+                    <p>Make decisions and control program flow.</p>
+                </a>
+                <a href="topics/functions.html" class="topic-card">
+                    <i class="fas fa-cube"></i>
+                    <h3>Functions</h3>
+                    <p>Create reusable blocks of code.</p>
+                </a>
+                <a href="topics/exceptions.html" class="topic-card">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Exceptions</h3>
+                    <p>Handle errors and exceptions gracefully.</p>
+                </a>
+                <a href="topics/classes.html" class="topic-card">
+                    <i class="fas fa-cubes"></i>
+                    <h3>Classes</h3>
+                    <p>Learn object-oriented programming.</p>
+                </a>
+                <a href="topics/inheritance.html" class="topic-card">
+                    <i class="fas fa-sitemap"></i>
+                    <h3>Inheritance</h3>
+                    <p>Extend and reuse class functionality.</p>
+                </a>
+                <a href="topics/modules.html" class="topic-card">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h3>Modules</h3>
+                    <p>Organize and reuse code across files.</p>
+                </a>
+                <a href="topics/file-handling.html" class="topic-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>File Handling</h3>
+                    <p>Read and write files in Python.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="playground" class="playground-section">
+            <h2>Python Playground</h2>
+            <div class="playground-container">
+                <div class="editor-header">
+                    <span>Try Python Code</span>
+                </div>
+                <div class="editor-wrapper">
+                    <textarea class="code-input" spellcheck="false" style="display: none;"># Write your Python code here
+print("Hello, World!")
+
+# Try some calculations
+result = 5 + 3
+print(f"5 + 3 = {result}")
+
+# Create a list
+numbers = [1, 2, 3, 4, 5]
+print(f"Numbers: {numbers}")
+</textarea>
+                    <pre class="editor-pre"><code class="language-python hljs"># Write your Python code here
+print("Hello, World!")
+
+# Try some calculations
+result = 5 + 3
+print(f"5 + 3 = {result}")
+
+# Create a list
+numbers = [1, 2, 3, 4, 5]
+print(f"Numbers: {numbers}")</code></pre>
+                </div>
+                <div class="editor-buttons">
+                    <button class="run-button"><i class="fas fa-play"></i> Run Code</button>
+                    <button class="reset-button"><i class="fas fa-undo"></i> Reset</button>
+                </div>
+                <div class="output">
+                    <!-- Output will appear here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="challenges" class="challenges">
+            <h2>Coding Challenges</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card">
+                    <span class="difficulty easy">Easy</span>
+                    <h3>Number Guessing Game</h3>
+                    <p>Create a simple number guessing game using loops and conditionals.</p>
+                    <button class="challenge-btn">Start Challenge</button>
+                </div>
+                <div class="challenge-card">
+                    <span class="difficulty medium">Medium</span>
+                    <h3>Todo List App</h3>
+                    <p>Build a command-line todo list application with file storage.</p>
+                    <button class="challenge-btn">Start Challenge</button>
+                </div>
+                <div class="challenge-card">
+                    <span class="difficulty hard">Hard</span>
+                    <h3>Web Scraper</h3>
+                    <p>Create a web scraper to collect data from a website.</p>
+                    <button class="challenge-btn">Start Challenge</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Python Learning Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

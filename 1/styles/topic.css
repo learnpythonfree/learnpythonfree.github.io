@@ -1,0 +1,176 @@
+/* Topic Page Styles */
+.topic-content {
+    max-width: 1200px;
+    margin: 6rem auto 2rem;
+    padding: 0 2rem;
+}
+
+.topic-article {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.topic-article h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+.topic-section {
+    margin-bottom: 2rem;
+}
+
+.topic-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.topic-section p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.example-box {
+    background-color: var(--surface);
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    overflow: hidden;
+}
+
+.example-box h3 {
+    padding: 1rem;
+    margin: 0;
+    color: var(--text-primary);
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.example-box pre {
+    margin: 0;
+    padding: 1rem;
+}
+
+.example-box code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+}
+
+/* Practice Section */
+.practice-section {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.practice-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.editor-container {
+    background-color: var(--code-background);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.editor-header {
+    background-color: var(--surface);
+    padding: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.run-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.run-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.output-container {
+    background-color: var(--surface);
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+#output {
+    font-family: monospace;
+    white-space: pre-wrap;
+    color: var(--text-primary);
+}
+
+/* Topic Navigation */
+.topic-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-secondary);
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: var(--card-background);
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    color: var(--text-primary);
+    background-color: var(--surface);
+    transform: translateY(-2px);
+}
+
+.back-button {
+    padding-right: 2rem;
+}
+
+.next-button {
+    padding-left: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .topic-content {
+        margin-top: 4rem;
+        padding: 0 1rem;
+    }
+
+    .topic-article,
+    .practice-section {
+        padding: 1.5rem;
+    }
+
+    .topic-navigation {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-button {
+        width: 100%;
+        justify-content: center;
+    }
+}

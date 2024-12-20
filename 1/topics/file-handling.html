@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Handling in Python - Learn Python</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles/topic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">
+                <i class="fab fa-python"></i>
+                <span>LearnPython<span class="my to">.my.to</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#topics">Topics</a></li>
+                <li><a href="../index.html#playground">Playground</a></li>
+                <li><a href="../index.html#challenges">Challenges</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="topic-content">
+        <article class="topic-article">
+            <nav class="topic-nav">
+                <a href="../index.html#topics" class="back-to-topics">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Topics
+                </a>
+                <div class="topic-progress">
+                    <span>Topic 15 of 15</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%"></div>
+                    </div>
+                </div>
+            </nav>
+
+            <h1>File Handling in Python</h1>
+            
+            <section class="topic-section">
+                <h2>Introduction to File Handling</h2>
+                <p>File handling is an essential part of any programming language. Python provides simple and intuitive ways to work with files. You can read from files, write to files, and manipulate file content easily.</p>
+
+                <h2>Opening Files</h2>
+                <p>To work with files in Python, you first need to open them. The <code>open()</code> function is used to open files:</p>
+                <div class="code-example">
+                    <pre><code class="python"># Opening a file for reading (default mode)
+file = open('example.txt', 'r')
+
+# Opening a file for writing
+file = open('example.txt', 'w')
+
+# Opening a file for appending
+file = open('example.txt', 'a')</code></pre>
+                </div>
+
+                <div class="info-box">
+                    <h3>File Opening Modes</h3>
+                    <ul>
+                        <li><code>'r'</code> - Read mode (default)</li>
+                        <li><code>'w'</code> - Write mode (overwrites existing content)</li>
+                        <li><code>'a'</code> - Append mode (adds to existing content)</li>
+                        <li><code>'r+'</code> - Read and write mode</li>
+                        <li><code>'b'</code> - Binary mode (can be combined with other modes)</li>
+                    </ul>
+                </div>
+
+                <h2>Reading from Files</h2>
+                <p>Python offers several methods to read file content:</p>
+                <div class="code-example">
+                    <pre><code class="python"># Reading entire file
+file = open('example.txt', 'r')
+content = file.read()
+file.close()
+
+# Reading line by line
+file = open('example.txt', 'r')
+for line in file:
+    print(line)
+file.close()
+
+# Using with statement (recommended)
+with open('example.txt', 'r') as file:
+    content = file.read()
+# File is automatically closed after the block</code></pre>
+                </div>
+
+                <div class="practice-section">
+                    <h3>Practice: Reading Files</h3>
+                    <p>Try reading from a file using different methods:</p>
+                    <div class="code-editor">
+                        <textarea class="code-input" spellcheck="false"># Create a file named 'test.txt' with some content
+# Then try to read it using the methods above
+with open('test.txt', 'r') as file:
+    content = file.read()
+    print(content)</textarea>
+                        <div class="output-container">
+                            <div class="output-header">Output</div>
+                            <div class="output"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Writing to Files</h2>
+                <p>You can write content to files using the write() method:</p>
+                <div class="code-example">
+                    <pre><code class="python"># Writing to a file
+with open('output.txt', 'w') as file:
+    file.write('Hello, World!')
+
+# Appending to a file
+with open('output.txt', 'a') as file:
+    file.write('\nNew line of text')</code></pre>
+                </div>
+
+                <div class="practice-section">
+                    <h3>Practice: Writing Files</h3>
+                    <p>Create a new file and write some content to it:</p>
+                    <div class="code-editor">
+                        <textarea class="code-input" spellcheck="false"># Write a program that creates a file and writes
+# multiple lines of text to it
+with open('output.txt', 'w') as file:
+    file.write('Line 1\n')
+    file.write('Line 2\n')
+    file.write('Line 3\n')</textarea>
+                        <div class="output-container">
+                            <div class="output-header">Output</div>
+                            <div class="output"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>File Methods and Properties</h2>
+                <div class="info-box">
+                    <h3>Useful File Methods</h3>
+                    <ul>
+                        <li><code>read()</code> - Read entire file</li>
+                        <li><code>readline()</code> - Read a single line</li>
+                        <li><code>readlines()</code> - Read all lines into a list</li>
+                        <li><code>write()</code> - Write string to file</li>
+                        <li><code>writelines()</code> - Write list of strings to file</li>
+                        <li><code>close()</code> - Close the file</li>
+                    </ul>
+                </div>
+
+                <h2>Error Handling</h2>
+                <p>When working with files, it's important to handle potential errors:</p>
+                <div class="code-example">
+                    <pre><code class="python">try:
+    with open('nonexistent.txt', 'r') as file:
+        content = file.read()
+except FileNotFoundError:
+    print('File does not exist!')
+except IOError:
+    print('An error occurred while reading the file!')</code></pre>
+                </div>
+
+                <div class="practice-section">
+                    <h3>Final Practice Exercise</h3>
+                    <p>Create a program that reads a file, modifies its content, and writes it back:</p>
+                    <div class="code-editor">
+                        <textarea class="code-input" spellcheck="false"># Read a file, convert all text to uppercase,
+# and write it back to a new file
+try:
+    with open('input.txt', 'r') as input_file:
+        content = input_file.read()
+        
+    with open('output.txt', 'w') as output_file:
+        output_file.write(content.upper())
+except FileNotFoundError:
+    print('Input file not found!')
+except IOError:
+    print('An error occurred!')</textarea>
+                        <div class="output-container">
+                            <div class="output-header">Output</div>
+                            <div class="output"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <nav class="topic-navigation">
+                <a href="modules.html" class="nav-button prev-topic">
+                    <i class="fas fa-arrow-left"></i>
+                    <div class="nav-text">
+                        <span class="nav-label">Previous Topic</span>
+                        <span class="topic-title">Modules</span>
+                    </div>
+                </a>
+            </nav>
+        </article>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
